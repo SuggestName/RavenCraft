@@ -3,6 +3,8 @@ const catalogo = new Catalogo();
 // Adicionando itens
 catalogo.add("Materia Prima", "Hide", 278);
 catalogo.add("Materia Prima", "Cotton", 248);
+catalogo.add("Materia Prima", "Wool", 285);
+catalogo.add("Materia Prima", "Spool of Hair", 100);
 
 catalogo.add("Materia Prima", "Small Log", 65);
 catalogo.add("Materia Prima", "Heavy Log", 55);
@@ -10,20 +12,38 @@ catalogo.add("Materia Prima", "Heavy Log", 55);
 catalogo.add("Materia Prima", "Copper Ore", 45);
 catalogo.add("Materia Prima", "Iron Ore", 320);
 
-catalogo.add("Materia Prima", "Sea Cured Leather", 580);
-catalogo.add("Materia Prima", "Shell Fragment", 888);
+catalogo.add("Materiais Loot", "Sea Cured Leather", 580);
+catalogo.add("Materiais Loot", "Shell Fragment", 888);
 
-catalogo.add("Materiais Hide", "Coarse Leather", 490, { "Hide": 2 });
-catalogo.add("Materiais Hide", "Craftman Leather", 1000, { "Hide": 4 });
+catalogo.add("Materiais Weaving", "Coarse Leather", 490, { "Hide": 2 });
+catalogo.add("Materiais Weaving", "Craftman Leather", 1000, { "Hide": 4 });
 
-catalogo.add("Materiais Cotton", "Coarse Thread", 530, { "Cotton": 3 });
-catalogo.add("Materiais Cotton", "Craftman Thread", 1386, { "Cotton": 6 });
+catalogo.add("Materiais Weaving", "Coarse Thread", 530, { "Cotton": 3 });
+catalogo.add("Materiais Weaving", "Craftman Thread", 1386, { "Cotton": 6 });
 
-catalogo.add("Materiais Wood", "Rough Plank", 125, { "Small Log": 6 });
-catalogo.add("Materiais Wood", "Refined Plank", 125, { "Heavy Log": 8 });
+catalogo.add("Materiais Weaving", "Simple Cloth", 290, { "Spool of Hair": 6 });
+catalogo.add("Materiais Weaving", "Craftman Cloth", 1025, { "Wool": 4 });
+
+catalogo.add("Materiais Carpentry", "Rough Plank", 125, { "Small Log": 6 });
+catalogo.add("Materiais Carpentry", "Refined Plank", 125, { "Heavy Log": 8 });
 
 catalogo.add("Materiais Blacksmithing", "Cooper Ingot", 185, { "Copper Ore": 5 });
 catalogo.add("Materiais Blacksmithing", "Iron Ingot", 1750, { "Iron Ore": 5 });
+
+catalogo.add("Pano", "Shadecloth Helmet T1", 389, { "Simple Cloth": 1 });
+catalogo.add("Pano", "Shadecloth Armor T1", 130, { "Simple Cloth": 1 });
+catalogo.add("Pano", "Shadecloth Legs T1", 400, { "Simple Cloth": 1 });
+catalogo.add("Pano", "Shadecloth Boots T1", 200, { "Simple Cloth": 1 });
+
+catalogo.add("Pano", "Viper Helmet T2", 1340, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Helmet T1": 1 });
+catalogo.add("Pano", "Viper Armor T2", 1000, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Armor T1": 1 });
+catalogo.add("Pano", "Viper Legs T2", 1400, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Legs T1": 1 });
+catalogo.add("Pano", "Viper Boots T2", 1790, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Boots T1": 1 });
+
+catalogo.add("Pano", "Profane Helmet T3", 8000, { "Shell Fragment": 3, "Craftman Cloth": 3, "Craftman Thread": 2, "Viper Helmet T2": 1 });
+catalogo.add("Pano", "Profane Armor T3", 7500, { "Shell Fragment": 3, "Craftman Cloth": 3, "Craftman Thread": 2, "Viper Armor T2": 1 });
+catalogo.add("Pano", "Profane Legs T3", 8500, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "Viper Legs T2": 1 });
+catalogo.add("Pano", "Profane Boots T3", 8000, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "Viper Boots T2": 1 });
 
 catalogo.add("Couro", "Hide Helmet T1", 365, { "Coarse Leather": 1 });
 catalogo.add("Couro", "Hide Armor T1", 130, { "Coarse Leather": 1 });
