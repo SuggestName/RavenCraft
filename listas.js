@@ -1,16 +1,22 @@
 const catalogo = new Catalogo();
 
 // Adicionando itens
-catalogo.add("Materia Prima", "Hide", 278);
-catalogo.add("Materia Prima", "Cotton", 248);
-catalogo.add("Materia Prima", "Wool", 285);
-catalogo.add("Materia Prima", "Spool of Hair", 100);
+catalogo.add("Materia Prima Husbandry", "Shank", 20);
+catalogo.add("Materia Prima Husbandry", "Hide", 278);
+catalogo.add("Materia Prima Husbandry", "Cotton", 248);
+catalogo.add("Materia Prima Husbandry", "Spool of Hair", 80);
+catalogo.add("Materia Prima Husbandry", "Wool", 285);
 
-catalogo.add("Materia Prima", "Small Log", 65);
-catalogo.add("Materia Prima", "Heavy Log", 55);
+catalogo.add("Materia Prima Woodcutting", "Small Log", 65);
+catalogo.add("Materia Prima Woodcutting", "Dense Log", 3700);
+catalogo.add("Materia Prima Woodcutting", "Heavy Log", 55);
+catalogo.add("Materia Prima Woodcutting", "Sturdy Log", 40);
 
-catalogo.add("Materia Prima", "Copper Ore", 45);
-catalogo.add("Materia Prima", "Iron Ore", 320);
+catalogo.add("Materia Prima Mining", "Copper Ore", 45);
+catalogo.add("Materia Prima Mining", "Iron Ore", 320);
+catalogo.add("Materia Prima Mining", "Stone", 33);
+catalogo.add("Materia Prima Mining", "Salt", 100);
+catalogo.add("Materia Prima Mining", "Coal", 170);
 
 catalogo.add("Materiais Loot", "Sea Cured Leather", 580);
 catalogo.add("Materiais Loot", "Shell Fragment", 888);
@@ -27,54 +33,63 @@ catalogo.add("Materiais Weaving", "Craftman Cloth", 1025, { "Wool": 4 });
 catalogo.add("Materiais Carpentry", "Rough Plank", 125, { "Small Log": 6 });
 catalogo.add("Materiais Carpentry", "Refined Plank", 125, { "Heavy Log": 8 });
 
-catalogo.add("Materiais Blacksmithing", "Cooper Ingot", 185, { "Copper Ore": 5 });
+catalogo.add("Materiais Blacksmithing", "Copper Ingot", 185, { "Copper Ore": 5 });
 catalogo.add("Materiais Blacksmithing", "Iron Ingot", 1750, { "Iron Ore": 5 });
+catalogo.add("Materiais Blacksmithing", "Steel Ingot", 2700, { "Coal": 2, "Iron Ore": 5 });
 
-catalogo.add("Pano", "Shadecloth Helmet T1", 389, { "Simple Cloth": 1 });
-catalogo.add("Pano", "Shadecloth Armor T1", 130, { "Simple Cloth": 1 });
-catalogo.add("Pano", "Shadecloth Legs T1", 400, { "Simple Cloth": 1 });
-catalogo.add("Pano", "Shadecloth Boots T1", 200, { "Simple Cloth": 1 });
+catalogo.add("Pano", "T1 Shadecloth Helmet", 389, { "Simple Cloth": 1 });
+catalogo.add("Pano", "T1 Shadecloth Armor", 130, { "Simple Cloth": 1 });
+catalogo.add("Pano", "T1 Shadecloth Legs", 400, { "Simple Cloth": 1 });
+catalogo.add("Pano", "T1 Shadecloth Boots", 200, { "Simple Cloth": 1 });
 
-catalogo.add("Pano", "Viper Helmet T2", 1340, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Helmet T1": 1 });
-catalogo.add("Pano", "Viper Armor T2", 1000, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Armor T1": 1 });
-catalogo.add("Pano", "Viper Legs T2", 1400, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Legs T1": 1 });
-catalogo.add("Pano", "Viper Boots T2", 1790, { "Simple Cloth": 1, "Coarse Thread": 1, "Shadecloth Boots T1": 1 });
+catalogo.add("Pano", "T2 Viper Helmet", 1340, { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Helmet": 1 });
+catalogo.add("Pano", "T2 Viper Armor", 1000, { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Armor": 1 });
+catalogo.add("Pano", "T2 Viper Legs", 1400, { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Legs": 1 });
+catalogo.add("Pano", "T2 Viper Boots", 1790, { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Boots": 1 });
 
-catalogo.add("Pano", "Profane Helmet T3", 8000, { "Shell Fragment": 3, "Craftman Cloth": 3, "Craftman Thread": 2, "Viper Helmet T2": 1 });
-catalogo.add("Pano", "Profane Armor T3", 7500, { "Shell Fragment": 3, "Craftman Cloth": 3, "Craftman Thread": 2, "Viper Armor T2": 1 });
-catalogo.add("Pano", "Profane Legs T3", 8500, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "Viper Legs T2": 1 });
-catalogo.add("Pano", "Profane Boots T3", 8000, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "Viper Boots T2": 1 });
+catalogo.add("Pano", "T3 Profane Helmet", 8000, { "Shell Fragment": 3, "Craftman Cloth": 3, "Craftman Thread": 2, "T2 Viper Helmet": 1 });
+catalogo.add("Pano", "T3 Profane Armor", 7500, { "Shell Fragment": 3, "Craftman Cloth": 3, "Craftman Thread": 2, "T2 Viper Armor": 1 });
+catalogo.add("Pano", "T3 Profane Legs", 8500, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "T2 Viper Legs": 1 });
+catalogo.add("Pano", "T3 Profane Boots", 8000, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "T2 Viper Boots": 1 });
 
-catalogo.add("Couro", "Hide Helmet T1", 365, { "Coarse Leather": 1 });
-catalogo.add("Couro", "Hide Armor T1", 130, { "Coarse Leather": 1 });
-catalogo.add("Couro", "Hide Legs T1", 400, { "Coarse Leather": 1 });
-catalogo.add("Couro", "Hide Boots T1", 339, { "Coarse Leather": 1 });
+catalogo.add("Couro", "T1 Hide Helmet", 365, { "Coarse Leather": 1 });
+catalogo.add("Couro", "T1 Hide Armor", 130, { "Coarse Leather": 1 });
+catalogo.add("Couro", "T1 Hide Legs", 400, { "Coarse Leather": 1 });
+catalogo.add("Couro", "T1 Hide Boots", 339, { "Coarse Leather": 1 });
 
-catalogo.add("Couro", "Nomad Helmet T2", 1200, { "Coarse Leather": 1, "Coarse Thread": 1, "Hide Helmet T1": 1 });
-catalogo.add("Couro", "Nomad Armor T2", 1300, { "Coarse Leather": 1, "Coarse Thread": 1, "Hide Armor T1": 1 });
-catalogo.add("Couro", "Nomad Legs T2", 1700, { "Coarse Leather": 1, "Coarse Thread": 1, "Hide Legs T1": 1 });
-catalogo.add("Couro", "Nomad Boots T2", 1700, { "Coarse Leather": 1, "Coarse Thread": 1, "Hide Boots T1": 1 });
+catalogo.add("Couro", "T2 Nomad Helmet", 1200, { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Helmet": 1 });
+catalogo.add("Couro", "T2 Nomad Armor", 1300, { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Armor": 1 });
+catalogo.add("Couro", "T2 Nomad Legs", 1700, { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Legs": 1 });
+catalogo.add("Couro", "T2 Nomad Boots", 1700, { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Boots": 1 });
 
-catalogo.add("Couro", "Bruiser Helmet T3", 4400, { "Shell Fragment": 3, "Craftman Leather": 3, "Craftman Thread": 2, "Nomad Helmet T2": 1 });
-catalogo.add("Couro", "Bruiser Armor T3", 3100, { "Shell Fragment": 3, "Craftman Leather": 3, "Craftman Thread": 2, "Nomad Armor T2": 1 });
-catalogo.add("Couro", "Bruiser Legs T3", 6000, { "Shell Fragment": 3, "Craftman Leather": 2, "Craftman Thread": 3, "Nomad Legs T2": 1 });
-catalogo.add("Couro", "Bruiser Boots T3", 8000, { "Shell Fragment": 3, "Craftman Leather": 2, "Craftman Thread": 3, "Nomad Boots T2": 1 });
+catalogo.add("Couro", "T3 Bruiser Helmet", 4400, { "Shell Fragment": 3, "Craftman Leather": 3, "Craftman Thread": 2, "T2 Nomad Helmet": 1 });
+catalogo.add("Couro", "T3 Bruiser Armor", 3100, { "Shell Fragment": 3, "Craftman Leather": 3, "Craftman Thread": 2, "T2 Nomad Armor": 1 });
+catalogo.add("Couro", "T3 Bruiser Legs", 6000, { "Shell Fragment": 3, "Craftman Leather": 2, "Craftman Thread": 3, "T2 Nomad Legs": 1 });
+catalogo.add("Couro", "T3 Bruiser Boots", 8000, { "Shell Fragment": 3, "Craftman Leather": 2, "Craftman Thread": 3, "T2 Nomad Boots": 1 });
 
-catalogo.add("Plate", "Pliant Helmet T1", 780, { "Cooper Ingot": 3 });
-catalogo.add("Plate", "Pliant Armor T1", 695, { "Cooper Ingot": 3 });
-catalogo.add("Plate", "Pliant Legs T1", 759, { "Cooper Ingot": 3 });
-catalogo.add("Plate", "Pliant Boots T1", 770, { "Cooper Ingot": 3 });
+catalogo.add("Plate", "T1 Pliant Helmet", 780, { "Copper Ingot": 3 });
+catalogo.add("Plate", "T1 Pliant Armor", 695, { "Copper Ingot": 3 });
+catalogo.add("Plate", "T1 Pliant Legs", 759, { "Copper Ingot": 3 });
+catalogo.add("Plate", "T1 Pliant Boots", 770, { "Copper Ingot": 3 });
 
-catalogo.add("Plate", "Crescent Helmet	T2", 1600, {"Cooper Ingot": 3, "Coarse Leather": 1, "Pliant Helmet T1": 1 });
-catalogo.add("Plate", "Crescent Armor T2", 1546, {"Cooper Ingot": 3, "Coarse Leather": 1, "Pliant Armor T1": 1 });
-catalogo.add("Plate", "Crescent Legs T2", 1899, {"Cooper Ingot": 3, "Coarse Leather": 1, "Pliant Legs T1": 1 });
-catalogo.add("Plate", "Crescent Boots T2", 2198, {"Cooper Ingot": 3, "Coarse Leather": 1, "Pliant Boots T1": 1 });
+catalogo.add("Plate", "T2 Crescent Helmet", 1600, {"Copper Ingot": 3, "Coarse Leather": 1, "T1 Pliant Helmet": 1 });
+catalogo.add("Plate", "T2 Crescent Armor", 1546, {"Copper Ingot": 3, "Coarse Leather": 1, "T1 Pliant Armor": 1 });
+catalogo.add("Plate", "T2 Crescent Legs", 1899, {"Copper Ingot": 3, "Coarse Leather": 1, "T1 Pliant Legs": 1 });
+catalogo.add("Plate", "T2 Crescent Boots", 2198, {"Copper Ingot": 3, "Coarse Leather": 1, "T1 Pliant Boots": 1 });
 
-catalogo.add("Plate", "Harbinger Helmet T3", 16900, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "Crescent Helmet T2": 1 });
-catalogo.add("Plate", "Harbinger Armor T3", 13000, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "Crescent Armor T2": 1 });
-catalogo.add("Plate", "Harbinger Legs T3", 17900, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "Crescent Legs T2": 1 });
-catalogo.add("Plate", "Harbinger Boots T3", 14700, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "Crescent Boots T2": 1 });
+catalogo.add("Plate", "T3 Harbinger Helmet", 16900, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "T2 Crescent Helmet": 1 });
+catalogo.add("Plate", "T3 Harbinger Armor", 13000, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "T2 Crescent Armor": 1 });
+catalogo.add("Plate", "T3 Harbinger Legs", 17900, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "T2 Crescent Legs": 1 });
+catalogo.add("Plate", "T3 Harbinger Boots", 14700, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "T2 Crescent Boots": 1 });
 
-catalogo.add("Armas", "Oaskwood Bow T1", 405, { "Coarse Thread": 1, "Rough Plank": 3});
-catalogo.add("Armas", "Viper Bow T2", 1100, { "Coarse Thread": 2, "Rough Plank": 6, "Oaskwood Bow T1": 1 });
-catalogo.add("Armas", "Black Ashe Bow T3", 4000, { "Sea Cured Leather": 12, "Refined Plank": 10, "Craftman Thread": 5, "Viper Bow T2": 1 });
+catalogo.add("Armas Carpentry", "T1 Oaskwood Bow", 405, { "Coarse Thread": 1, "Rough Plank": 3});
+catalogo.add("Armas Carpentry", "T2 Viper Bow", 1100, { "Coarse Thread": 2, "Rough Plank": 6, "T1 Oaskwood Bow": 1 });
+catalogo.add("Armas Carpentry", "T3 Black Ashe Bow", 4000, { "Sea Cured Leather": 12, "Refined Plank": 10, "Craftman Thread": 5, "T2 Viper Bow": 1 });
+
+catalogo.add("Armas Blacksmithing", "T1 Shipbuilding Mallet", 370, { "Copper Ingot": 8});
+catalogo.add("Armas Blacksmithing", "T1 Rough Sword", 400, { "Copper Ingot": 4});
+catalogo.add("Armas Blacksmithing", "T1 Solid Mace", 550, { "Copper Ingot": 4});
+catalogo.add("Armas Blacksmithing", "T1 Serrated Dagger", 200, { "Copper Ingot": 4});
+catalogo.add("Armas Blacksmithing", "T1 Wicked Axe", 200, { "Copper Ingot": 4});
+catalogo.add("Armas Blacksmithing", "T1 Burnished Greatsword", 350, { "Copper Ingot": 8});
+catalogo.add("Armas Blacksmithing", "T1 Rough Greataxe", 350, { "Copper Ingot": 8});
