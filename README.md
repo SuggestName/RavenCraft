@@ -46,7 +46,7 @@ Frontend: HTML, CSS, JavaScript (with frameworks like React for a dynamic and re
 
 Contributions are always welcome! If you have any suggestions to improve the site or add new features, feel free to create an 'issue' or 'pull request'.
 
-# Contact
+## Contact
 
 Developer: Eduardo Vicente
 Email: dudugt500@gmail.com
