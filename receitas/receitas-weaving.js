@@ -3,9 +3,11 @@ catalog.add("Materiais Weaving", "Craftman Leather", 1000, { "Hide": 4 });
 
 catalog.add("Materiais Weaving", "Coarse Thread", 530, { "Cotton": 3 });
 catalog.add("Materiais Weaving", "Craftman Thread", 1386, { "Cotton": 6 });
+catalog.add("Materiais Weaving", "Fine Thread", 1025, { "Cotton": 9 });
 
 catalog.add("Materiais Weaving", "Simple Cloth", 290, { "Spool of Hair": 6 });
 catalog.add("Materiais Weaving", "Craftman Cloth", 1025, { "Wool": 4 });
+
 
 catalog.add("Set de Pano", "T1 Shadecloth Helmet", 389, { "Simple Cloth": 1 });
 catalog.add("Set de Pano", "T1 Shadecloth Armor", 130, { "Simple Cloth": 1 });

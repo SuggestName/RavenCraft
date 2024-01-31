@@ -7,7 +7,8 @@ const receitasScripts = [
     "receitas-materiasloots.js",
     "receitas-blacksmithing.js",
     "receitas-weaving.js",
-    "receitas-carpentry.js"
+    "receitas-carpentry.js",
+    "receitas-cooking.js"
 ];
 
 receitasScripts.forEach(script => {
@@ -35,16 +36,24 @@ function filterByType() {
     const selectedType = DOMUtils.getValue("tipoSelect");
     let optionsHTML = '';
 
-    if (selectedType === 'Todos') {
-        for (let type in catalog.items) {
-            for (let itemName in catalog.items[type]) {
+    const addItemOptions = (items) => {
+        for (let itemName in items) {
+            const item = items[itemName];
+            // Verifica se o item tem preço 0 e receita vazia
+            if (!item.marketValue && Object.keys(item.recipe).length === 0) {
+                optionsHTML += `<option class="dropdown-divider" disabled>${itemName}</option>`;
+            } else {
                 optionsHTML += `<option value="${itemName}">${itemName}</option>`;
             }
         }
-    } else {
-        for (let itemName in catalog.items[selectedType]) {
-            optionsHTML += `<option value="${itemName}">${itemName}</option>`;
+    };
+
+    if (selectedType === 'Todos') {
+        for (let type in catalog.items) {
+            addItemOptions(catalog.items[type]);
         }
+    } else {
+        addItemOptions(catalog.items[selectedType]);
     }
 
     DOMUtils.setInnerHTML("receitaSelect", optionsHTML);

@@ -15,3 +15,5 @@ catalog.add("Materia-Prima Mining", "Iron Ore", 320);
 catalog.add("Materia-Prima Mining", "Stone", 33);
 catalog.add("Materia-Prima Mining", "Salt", 100);
 catalog.add("Materia-Prima Mining", "Coal", 170);
+
+catalog.add("Materia-Prima Farming", "Corn", 195);
