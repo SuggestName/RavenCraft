@@ -117,7 +117,7 @@ function printTotalPrice(itemName, quantity) {
     let manufacturingCost = costCalculator.calculateManufacturingCost(itemName, quantity);
 
     let totalRawMaterialsCost = 0;
-    let output = `${itemName} x${quantity} - Resumo de Custos:\n`;
+    let output = `${itemName} x${quantity} - Resumo de Custos:\n\n`;
     output += "Custo das Matérias-Primas (Itens sem receita):\n";
 
     for (let material in rawMaterialsCost) {

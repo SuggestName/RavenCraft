@@ -1,8 +1,9 @@
 catalog.add("Materia-Prima Husbandry", "Shank", 20);
 catalog.add("Materia-Prima Husbandry", "Hide", 278);
-catalog.add("Materia-Prima Husbandry", "Cotton", 248);
 catalog.add("Materia-Prima Husbandry", "Spool of Hair", 80);
 catalog.add("Materia-Prima Husbandry", "Wool", 285);
+
+catalog.add("Materia-Prima Farming", "Cotton", 248);
 
 catalog.add("Materia-Prima Woodcutting", "Small Log", 65);
 catalog.add("Materia-Prima Woodcutting", "Dense Log", 3700);
