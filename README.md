@@ -1,4 +1,6 @@
-# Ravendawn Craft Calculator
+# Ravendawn Craft Calculator - PT-BR
+
+https://suggestname.github.io/RavenCraft/
 
 ## Sobre o Projeto
 
@@ -25,7 +27,9 @@ Desenvolvedor: Eduardo Vicente
 Email: dudugt500@gmail.com
 
 
-# Ravendawn Craft Calculator
+# Ravendawn Craft Calculator - ENG
+
+https://suggestname.github.io/RavenCraft/
 
 ## About the Project
 
