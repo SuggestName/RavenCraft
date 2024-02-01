@@ -39,7 +39,7 @@ catalog.add("Blacksmith", "--- Greatsword ---");
 catalog.add("Blacksmith", "T1 Burnished Greatsword", 350, { "Copper Ingot": 8 });
 catalog.add("Blacksmith", "T2 Valiant Greatsword", 1500, { "Copper Ingot": 6, "Coarse Leather": 6, "T1 Burnished Greatsword": 1 });
 catalog.add("Blacksmith", "T3 Heroic Greatsword", 30000, { "Troll Fang": 12, "Iron Ingot": 10, "Craftman Leather": 10, "T2 Valiant Greatsword": 1 });
-catalog.add("Blacksmith", "T4 Bonebiter Greatsword", 350000, { "Thin Blade": 20, "Steel Ingot": 12, "Tanned Leather": 20, "T3 Heroic Sword": 1 });
+catalog.add("Blacksmith", "T4 Bonebiter Greatsword", 350000, { "Thin Blade": 20, "Steel Ingot": 12, "Tanned Leather": 20, "T3 Heroic Greatsword": 1 });
 
 catalog.add("Blacksmith", "--- Light Blade ---");
 catalog.add("Blacksmith", "T1 Skirmisher Blade", 370, { "Copper Ingot": 8 });
