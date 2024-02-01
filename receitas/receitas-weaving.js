@@ -11,6 +11,8 @@ catalog.add("Weaving", "Fine Thread", 1025, { "Cotton": 9 });
 catalog.add("Weaving", "Simple Cloth", 290, { "Spool of Hair": 6 });
 catalog.add("Weaving", "Craftman Cloth", 1025, { "Wool": 4 });
 
+catalog.add("Weaving", "Silk", 2500, { "Wool": 6 });
+
 catalog.add("Weaving", "--- Set's ---");
 catalog.add("Weaving", "--- Cloth T1 ---");
 catalog.add("Weaving", "T1 Shadecloth Helmet", 389, { "Simple Cloth": 1 });
@@ -30,6 +32,12 @@ catalog.add("Weaving", "T3 Profane Armor", 7500, { "Shell Fragment": 3, "Craftma
 catalog.add("Weaving", "T3 Profane Legs", 8500, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "T2 Viper Legs": 1 });
 catalog.add("Weaving", "T3 Profane Boots", 8000, { "Shell Fragment": 3, "Craftman Cloth": 2, "Craftman Thread": 3, "T2 Viper Boots": 1 });
 
+catalog.add("Weaving", "--- Cloth T4 ---");
+catalog.add("Weaving", "T4 Celestial Helmet", 200000, { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Helmet": 1 });
+catalog.add("Weaving", "T4 Celestial Armor", 70000, { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Armor": 1 });
+catalog.add("Weaving", "T4 Celestial Legs", 0, { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Legs": 1 });
+catalog.add("Weaving", "T4 Celestial Boots", 0, { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Boots": 1 });
+
 catalog.add("Weaving", "--- Leather T1 ---");
 catalog.add("Weaving", "T1 Hide Helmet", 365, { "Coarse Leather": 1 });
 catalog.add("Weaving", "T1 Hide Armor", 130, { "Coarse Leather": 1 });
@@ -47,3 +55,9 @@ catalog.add("Weaving", "T3 Bruiser Helmet", 4400, { "Shell Fragment": 3, "Craftm
 catalog.add("Weaving", "T3 Bruiser Armor", 3100, { "Shell Fragment": 3, "Craftman Leather": 3, "Craftman Thread": 2, "T2 Nomad Armor": 1 });
 catalog.add("Weaving", "T3 Bruiser Legs", 6000, { "Shell Fragment": 3, "Craftman Leather": 2, "Craftman Thread": 3, "T2 Nomad Legs": 1 });
 catalog.add("Weaving", "T3 Bruiser Boots", 8000, { "Shell Fragment": 3, "Craftman Leather": 2, "Craftman Thread": 3, "T2 Nomad Boots": 1 });
+
+catalog.add("Weaving", "--- Leather T4 ---");
+catalog.add("Weaving", "T4 Outlaw Helmet", 4400, { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Helmet": 1 });
+catalog.add("Weaving", "T4 Outlaw Armor", 3100, { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Armor": 1 });
+catalog.add("Weaving", "T4 Outlaw Legs", 6000, { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Legs": 1 });
+catalog.add("Weaving", "T4 Outlaw Boots", 8000, { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Boots": 1 });

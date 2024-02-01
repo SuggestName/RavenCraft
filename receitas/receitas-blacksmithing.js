@@ -22,6 +22,12 @@ catalog.add("Blacksmith", "T3 Harbinger Armor", 13000, { "Shell Fragment": 3, "I
 catalog.add("Blacksmith", "T3 Harbinger Legs", 17900, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "T2 Crescent Legs": 1 });
 catalog.add("Blacksmith", "T3 Harbinger Boots", 14700, { "Shell Fragment": 3, "Iron Ingot": 10, "Craftman Leather": 3, "T2 Crescent Boots": 1 });
 
+catalog.add("Blacksmith", "--- T4 ---");
+catalog.add("Blacksmith", "T4 Enforcer Helmet", 0, { "Internal Padding": 5, "Steel Ingot": 18, "Tanned Leather": 3, "T3 Harbinger Helmet": 1 });
+catalog.add("Blacksmith", "T4 Enforcer Armor", 300000, { "Internal Padding": 5, "Steel Ingot": 18, "Tanned Leather": 3, "T3 Harbinger Armor": 1 });
+catalog.add("Blacksmith", "T4 Enforcer Legs", 0, { "Internal Padding": 5, "Steel Ingot": 18, "Tanned Leather": 3, "T3 Harbinger Legs": 1 });
+catalog.add("Blacksmith", "T4 Enforcer Boots", 0, { "Internal Padding": 5, "Steel Ingot": 18, "Tanned Leather": 3, "T3 Harbinger Boots": 1 });
+
 catalog.add("Blacksmith", "--- Weapons ---");
 catalog.add("Blacksmith", "--- Hammer ---");
 catalog.add("Blacksmith", "T1 Shipbuilding Mallet", 370, { "Copper Ingot": 8 });

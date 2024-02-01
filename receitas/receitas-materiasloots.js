@@ -7,3 +7,6 @@ catalog.add("Materiais Loot", "Ambersprite Shard", 24000);
 catalog.add("Materiais Loot", "Cunning Handle", 20500);
 catalog.add("Materiais Loot", "Metallic Core", 15500);
 catalog.add("Materiais Loot", "Thin Blade", 7500);
+catalog.add("Materiais Loot", "Internal Padding", 25000);
+catalog.add("Materiais Loot", "Phantasmagorical Cloth", 9000);
+catalog.add("Materiais Loot", "Kaiman Scale", 6200);
