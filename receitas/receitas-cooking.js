@@ -1,1 +1,2 @@
-catalog.add("Materiais Cooking", "Oil", 180, { "Corn": 1});
+catalog.add("Cooking", "--- Materiais ---");
+catalog.add("Cooking", "Oil", 180, { "Corn": 1});
