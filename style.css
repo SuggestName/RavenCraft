@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+#craftForm {
+    margin-bottom: 20px;
+}
+
+#resultado, #itensReceita {
+    background-color: #f7f7f7;
+    border: 1px solid #e9ecef;
+    padding: 10px;
+}
+
+option:disabled {
+    background-color: #fff069; /* Cor de fundo para opções desabilitadas */
+    color: #000000; /* Cor do texto para opções desabilitadas */
+}

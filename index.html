@@ -1,59 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Custo de Crafting</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e9ecef;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .result {
-            background-color: #f7f7f7;
-            border: 1px solid #e9ecef;
-            padding: 10px;
-        }
-    </style>
-
-    <!-- Script references -->
-    <script src="classes/Item.js"></script>
-    <script src="classes/Catalog.js"></script>
-    <script src="classes/CostCalculator.js"></script>
-    <script src="utils/DOMUtils.js"></script>
-    <script src="utils/Formatter.js"></script>
-    <script src="main.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container-fluid">
+    <header>
         <div class="header text-center pt-3">
             <h1>Calculadora de Custo de Crafting</h1>
         </div>
+    </header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" id="tipoReceitaMenu">
+                    <!-- Tipos de receitas serão adicionados aqui -->
+                </ul>
+            </div>
+        </nav>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="tipoSelect">Filtrar por Tipo:</label>
-                    <select id="tipoSelect" class="form-control" onchange="filterByType()">
-                        <option value="Todos">Todos</option>
+                    <label for="receitaSelect">Escolha uma receita:</label>
+                    <select id="receitaSelect" class="form-control">
+                        <!-- Receitas serão adicionadas aqui -->
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="receitaSelect">Escolha uma receita:</label>
-                    <select id="receitaSelect" class="form-control" onchange="listRecipeItems(this.value)">
-                    </select>
-                </div>
-                <div class="form-group" id="itensReceitaSection" style="display: none;">
                     <label>Itens da Receita:</label>
                     <div id="itensReceita" class="result"></div>
                 </div>
@@ -64,7 +47,7 @@
                     <input type="number" id="quantidade" value="1" min="1" class="form-control">
                 </div>
                 <button onclick="showTotalPrice()" class="btn btn-primary btn-block">Calcular</button>
-                <pre id="resultado" class="mt-3 result"></pre>
+                <div id="resultado" class="mt-3 result"></div>
             </div>
         </div>
     </div>
@@ -73,5 +56,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Seus scripts -->
+    <script src="utils/DOMUtils.js"></script>
+    <script src="utils/Formatter.js"></script>
+
+    <script src="js/Item.js"></script>
+    <script src="js/Recipe.js"></script>
+    <script src="js/CraftsManager.js"></script>
+
+    <script src="js/ItemsList.js"></script>
+    <script src="js/RecipesList.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
