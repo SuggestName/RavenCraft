@@ -156,11 +156,11 @@ craftsManager.addRecipe(new Recipe("T2 Silversmith Boots", { "Tanned Leather": 3
 craftsManager.addRecipe(new Recipe("T2 Silversmith Bracers", { "Tanned Leather": 12, "Fine Thread": 9, "T1 Apprentice Anvil Bracers": 1 }, "Weaving"));
 
 craftsManager.addRecipe(new Recipe("Cooking Craft T1", {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Fry Cook Helmet", { "Craftman Thread": 3, "Craftman Leather": 5 }, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Fry Cook Armor", { "Craftman Thread": 3, "Craftman Leather": 5 }, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Fry Cook Legs", { "Craftman Thread": 5, "Craftman Leather": 3 }, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Fry Cook Boots", { "Craftman Thread": 5, "Craftman Leather": 3 }, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Fry Cook Bracers", { "Craftman Thread": 8, "Craftman Leather": 8 }, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Fry Cook Helmet", { "Craftman Thread": 3, "Craftman Cloth": 5 }, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Fry Cook Armor", { "Craftman Thread": 3, "Craftman Cloth": 5 }, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Fry Cook Legs", { "Craftman Thread": 5, "Craftman Cloth": 3 }, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Fry Cook Boots", { "Craftman Thread": 5, "Craftman Cloth": 3 }, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Fry Cook Bracers", { "Craftman Thread": 8, "Craftman Cloth": 8 }, "Weaving"));
 
 craftsManager.addRecipe(new Recipe("Cooking Craft T2", {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T2 Sous Chef Helmet", { "Silk": 8, "Fine Thread": 3, "T1 Fry Cook Helmet": 1 }, "Weaving"));
