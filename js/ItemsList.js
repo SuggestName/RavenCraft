@@ -17,9 +17,12 @@ craftsManager.addItem(new Item("Stone", 33, "MateriaPrima"));
 craftsManager.addItem(new Item("Salt", 100, "MateriaPrima"));
 craftsManager.addItem(new Item("Coal", 170, "MateriaPrima"));
 
+craftsManager.addItem(new Item("Potato", 50, "MateriaPrima"));
 craftsManager.addItem(new Item("Corn", 195, "MateriaPrima"));
+craftsManager.addItem(new Item("Orange Scales", 75, "MateriaPrima"));
+craftsManager.addItem(new Item("Wheat", 120, "MateriaPrima"));
 
-// --- Carpentry --- //
+// --- Loots de Monstros --- //
 craftsManager.addItem(new Item("Shell Fragment", 888, "MateriaPrima"));
 craftsManager.addItem(new Item("Sea Cured Leather", 580, "MateriaPrima"));
 craftsManager.addItem(new Item("Troll Fang", 1480, "MateriaPrima"));
@@ -231,4 +234,14 @@ craftsManager.addItem(new Item("T4 Outlaw Legs", 6000, "Item"));
 craftsManager.addItem(new Item("T4 Outlaw Boots", 8000, "Item"));
 
 // --- Cooking --- //
+craftsManager.addItem(new Item("Baked Potatoes", 20, "Material"));
+craftsManager.addItem(new Item("Corn On A Cob", 20, "Material"));
+craftsManager.addItem(new Item("Potato Bread", 20, "Material"));
+craftsManager.addItem(new Item("Sajecho Hardtack", 40, "Material"));
+
+craftsManager.addItem(new Item("Ground Flour", 100, "Material"));
+
+craftsManager.addItem(new Item("Vodka", 20, "Material"));
+craftsManager.addItem(new Item("Beer", 40, "Material"));
+
 craftsManager.addItem(new Item("Oil", 180, "Material"));

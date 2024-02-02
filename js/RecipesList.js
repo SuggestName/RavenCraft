@@ -232,5 +232,16 @@ craftsManager.addRecipe(new Recipe("T4 Outlaw Legs", { "Kaiman Scale": 5, "Tanne
 craftsManager.addRecipe(new Recipe("T4 Outlaw Boots", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Boots": 1 }, "Weaving"));
 
 // --- Cooking --- //
-craftsManager.addRecipe(new Recipe("Materiais Cooking", {}, "Cooking"));
+craftsManager.addRecipe(new Recipe("Baked Goods", {}, "Cooking"));
+craftsManager.addRecipe(new Recipe("Baked Potatoes", { "Potato": 4 }, "Cooking"));
+craftsManager.addRecipe(new Recipe("Corn On a Cob", { "Corn": 2 }, "Cooking"));
+craftsManager.addRecipe(new Recipe("Potato Bread", { "Corn": 1, "Potato": 3 }, "Cooking"));
+craftsManager.addRecipe(new Recipe("Sajecho Hardtack", { "Orange Scales": 2, "Ground Flour": 2 }, "Cooking"));
+craftsManager.addRecipe(new Recipe("Rohna Crackers", { "Ground Flour": 2 }, "Cooking"));
+
+craftsManager.addRecipe(new Recipe("Drinks", {}, "Cooking"));
+craftsManager.addRecipe(new Recipe("Vodka", { "Potato": 5 }, "Cooking"));
+craftsManager.addRecipe(new Recipe("Beer", { "Wheat": 5 }, "Cooking"));
+
+craftsManager.addRecipe(new Recipe("Ingredient", {}, "Cooking"));
 craftsManager.addRecipe(new Recipe("Oil", { "Corn": 1 }, "Cooking"));
