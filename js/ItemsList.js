@@ -1,14 +1,14 @@
 // --- Materia-Prima --- //
-craftsManager.addItem(new Item("Shank", 20, "MateriaPrima"));
-craftsManager.addItem(new Item("Hide", 278, "MateriaPrima"));
+craftsManager.addItem(new Item("Shank", 40, "MateriaPrima"));
+craftsManager.addItem(new Item("Hide", 400, "MateriaPrima"));
 craftsManager.addItem(new Item("Spool of Hair", 80, "MateriaPrima"));
-craftsManager.addItem(new Item("Wool", 285, "MateriaPrima"));
+craftsManager.addItem(new Item("Wool", 490, "MateriaPrima"));
 
 craftsManager.addItem(new Item("Cotton", 248, "MateriaPrima"));
 
-craftsManager.addItem(new Item("Small Log", 65, "MateriaPrima"));
-craftsManager.addItem(new Item("Dense Log", 3700, "MateriaPrima"));
-craftsManager.addItem(new Item("Heavy Log", 55, "MateriaPrima"));
+craftsManager.addItem(new Item("Small Log", 70, "MateriaPrima"));
+craftsManager.addItem(new Item("Dense Log", 3500, "MateriaPrima"));
+craftsManager.addItem(new Item("Heavy Log", 85, "MateriaPrima"));
 craftsManager.addItem(new Item("Sturdy Log", 40, "MateriaPrima"));
 
 craftsManager.addItem(new Item("Copper Ore", 45, "MateriaPrima"));
@@ -132,16 +132,16 @@ craftsManager.addItem(new Item("T3 Savage Battle Axe", 13000, "Item"));
 craftsManager.addItem(new Item("T4 Hangman Greataxe", 400000, "Item"));
 
 // --- Cooking --- //
-craftsManager.addItem(new Item("Coarse Leather", 490, "Material"));
-craftsManager.addItem(new Item("Craftman Leather", 1000, "Material"));
-craftsManager.addItem(new Item("Tanned Leather", 3800, "Material"));
+craftsManager.addItem(new Item("Coarse Leather", 700, "Material"));
+craftsManager.addItem(new Item("Craftman Leather", 1600, "Material"));
+craftsManager.addItem(new Item("Tanned Leather", 2900, "Material"));
 
-craftsManager.addItem(new Item("Coarse Thread", 530, "Material"));
-craftsManager.addItem(new Item("Craftman Thread", 1386, "Material"));
-craftsManager.addItem(new Item("Fine Thread", 1025, "Material"));
+craftsManager.addItem(new Item("Coarse Thread", 480, "Material"));
+craftsManager.addItem(new Item("Craftman Thread", 1220, "Material"));
+craftsManager.addItem(new Item("Fine Thread", 2550, "Material"));
 
-craftsManager.addItem(new Item("Simple Cloth", 290, "Material"));
-craftsManager.addItem(new Item("Craftman Cloth", 1025, "Material"));
+craftsManager.addItem(new Item("Simple Cloth", 300, "Material"));
+craftsManager.addItem(new Item("Craftman Cloth", 1370, "Material"));
 
 craftsManager.addItem(new Item("Silk", 2500, "Material"));
 

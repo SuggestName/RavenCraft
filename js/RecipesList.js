@@ -35,7 +35,7 @@ craftsManager.addRecipe(new Recipe("T3 Serpent Sceptre", { "Troll Fang": 6, "Ref
 craftsManager.addRecipe(new Recipe("T4 Crystal Sceptre", { "Ambersprite Shard": 10, "Treated Plank": 15, "T3 Serpent Sceptre": 1 }, "Carpentry"));
 
 // --- Blacksmithing --- //
-craftsManager.addRecipe(new Recipe("Materiais Blacksmithing", {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("Ingots", {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Copper Ingot", { "Copper Ore": 5 }, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Iron Ingot", { "Iron Ore": 5 }, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Steel Ingot", { "Coal": 2, "Iron Ore": 5 }, "Blacksmithing"));
