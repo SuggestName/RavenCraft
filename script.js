@@ -81,7 +81,7 @@ function populateItemsList(recipeName) {
             const item = craftsManager.getItem(itemName);
             if (item) {
                 const rowDiv = document.createElement('div');
-                rowDiv.className = 'row';
+                rowDiv.className = 'row mt-2';
 
                 const labelColDiv = document.createElement('div');
                 labelColDiv.className = 'col-6';

@@ -15,11 +15,6 @@ body {
     transition: color 0.3s;
 }
 
-option:disabled {
-    background-color: #fff069; /* Cor de fundo para opções desabilitadas */
-    color: #000000; /* Cor do texto para opções desabilitadas */
-}
-
 /* Cores e estilos para o modo claro */
 .light-mode {
     background-color: #ffffff;
@@ -45,6 +40,11 @@ option:disabled {
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.light-mode option:disabled {
+    background-color: #fff069; /* Cor de fundo para opções desabilitadas */
+    color: #000000; /* Cor do texto para opções desabilitadas */
 }
 
 /* Cores e estilos para o modo escuro */
@@ -94,6 +94,11 @@ option:disabled {
 
 .dark-mode .navbar-light .navbar-nav .nav-link {
     color: #ffffff !important; /* Assegura que os links fiquem visíveis em modo escuro */
+}
+
+.dark-mode option:disabled {
+    background-color: #fff069; /* Cor de fundo para opções desabilitadas */
+    color: #000000; /* Cor do texto para opções desabilitadas */
 }
 
 /* Responsividade */
