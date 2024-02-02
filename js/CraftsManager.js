@@ -26,53 +26,40 @@ class CraftsManager {
         return Array.from(types);
     }
 
-    calculateCraftingCost(itemName, quantity, reportType) {
-        let costDetails = {
-            totalCost: 0,
-            details: new Map()
-        };
+    calculateCraftingCost(itemName, quantity, options = { ignorarMateriais: false, ignorarItens: false }, isRootCall = true) {
+        let costDetailsMap = new Map();
 
         const addItemCost = (itemName, quantity, unitCost) => {
             let totalCost = unitCost * quantity;
-            if (costDetails.details.has(itemName)) {
-                let existing = costDetails.details.get(itemName);
+            if (costDetailsMap.has(itemName)) {
+                let existing = costDetailsMap.get(itemName);
                 existing.quantity += quantity;
                 existing.totalCost += totalCost;
             } else {
-                costDetails.details.set(itemName, { itemName, quantity, unitCost, totalCost });
+                costDetailsMap.set(itemName, { itemName, quantity, unitCost, totalCost });
             }
-            costDetails.totalCost += totalCost;
         };
 
-        const recursiveCalculation = (itemName, quantity, reportType) => {
-            const item = this.items.get(itemName);
+        const calculateItemCost = (itemName, quantity, options, isRootCall) => {
+            const item = this.getItem(itemName);
             const recipe = this.recipes.get(itemName);
 
-            if (!item) return;
-
-            if (item.type === "MateriaPrima") {
-                addItemCost(itemName, quantity, item.marketValue);
-            } else if (reportType === 3 && item.type === "Item") {
+            // Se for a chamada raiz ou as opções permitirem o cálculo do item
+            if (!recipe || (!isRootCall && ((options.ignorarMateriais && item.type === 'Material') || (options.ignorarItens && item.type === 'Item')))) {
                 addItemCost(itemName, quantity, item.marketValue);
                 return;
-            } else if (reportType === 2 && (item.type === "Material" || item.type === "Item")) {
-                addItemCost(itemName, quantity, item.marketValue);
-                return; // Não processa mais a receita para o reportType 2
             }
 
-            if (recipe && (item.type === "Material" || item.type === "Item")) {
-                Object.entries(recipe.requirements).forEach(([reqItemName, reqQuantity]) => {
-                    recursiveCalculation(reqItemName, reqQuantity * quantity, reportType);
-                });
-            }
+            // Para receitas não ignoradas ou na chamada raiz
+            Object.entries(recipe.requirements).forEach(([reqItemName, reqQuantity]) => {
+                calculateItemCost(reqItemName, reqQuantity * quantity, options, false);
+            });
         };
 
-        const recipe = this.recipes.get(itemName);
-        Object.entries(recipe.requirements).forEach(([reqItemName, reqQuantity]) => {
-            recursiveCalculation(reqItemName, reqQuantity * quantity, reportType);
-        });
+        calculateItemCost(itemName, quantity, options, isRootCall);
 
-        return Array.from(costDetails.details.values());
+        // Converter o Map para um array de objetos para a saída
+        return Array.from(costDetailsMap.values());
     }
 }
 

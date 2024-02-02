@@ -1,8 +1,28 @@
-const reportTypeNames = {
-    1: "Comprando: Matérias-Primas",
-    2: "Comprando: Materiais e Itens",
-    3: "Comprando: Matérias-Primas e Itens"
-};
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+        document.body.className = currentTheme;
+        updateToggleButton(currentTheme);
+    }
+
+    themeToggleButton.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+        const theme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        localStorage.setItem('theme', theme);
+        updateToggleButton(theme);
+    });
+
+    function updateToggleButton(theme) {
+        if (theme === 'dark-mode') {
+            themeToggleButton.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+        } else {
+            themeToggleButton.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+        }
+    }
+});
 
 function populateRecipeTypeMenu() {
     const recipeTypes = craftsManager.getRecipeTypes();
@@ -18,7 +38,7 @@ function populateRecipeTypeMenu() {
 function filterRecipesByType(type) {
     const recipes = craftsManager.getRecipesByType(type);
     let recipeSelect = document.getElementById('receitaSelect');
-    DOMUtils.clearElement('receitaSelect'); // Limpa as opções existentes
+    DOMUtils.clearElement('receitaSelect');
 
     recipes.forEach(recipe => {
         let option = DOMUtils.createElement('option', { value: recipe.output }, recipe.output);
@@ -30,43 +50,84 @@ function filterRecipesByType(type) {
         recipeSelect.appendChild(option);
     });
 
-    // Atualiza a lista de itens baseada na primeira receita, se disponível
     recipeSelect = document.getElementById('receitaSelect').value;
     populateItemsList(recipeSelect);
 }
 
 function populateItemsList(recipeName) {
     const itemsDiv = document.getElementById('itensReceita');
-    itemsDiv.innerHTML = ''; // Limpa a lista existente
-    const itemsSet = getItemsForRecipe(recipeName);
+    itemsDiv.innerHTML = '';
 
-    itemsSet.forEach(itemName => {
-        const item = craftsManager.getItem(itemName);
-        if (item) {
-            const rowDiv = document.createElement('div');
-            rowDiv.className = 'row';
+    // Adiciona rótulos para as colunas
+    const headerRowDiv = document.createElement('div');
+    headerRowDiv.className = 'row font-weight-bold';
+    const headerLabelColDiv = document.createElement('div');
+    headerLabelColDiv.className = 'col-6';
+    headerLabelColDiv.textContent = 'Itens';
+    const headerValueColDiv = document.createElement('div');
+    headerValueColDiv.className = 'col-6';
+    headerValueColDiv.textContent = 'Valores Do Market';
+    headerRowDiv.appendChild(headerLabelColDiv);
+    headerRowDiv.appendChild(headerValueColDiv);
+    itemsDiv.appendChild(headerRowDiv);
 
-            const labelColDiv = document.createElement('div');
-            labelColDiv.className = 'col-6';
-            const label = document.createElement('label');
-            label.textContent = itemName;
-            labelColDiv.appendChild(label);
+    function addItemsRecursively(recipeName, level = 0, parentRecipe = null) {
+        const recipe = craftsManager.recipes.get(recipeName);
+        if (!recipe && !parentRecipe) return;
 
-            const inputColDiv = document.createElement('div');
-            inputColDiv.className = 'col-6';
-            const input = document.createElement('input');
-            input.type = 'number';
-            input.className = 'form-control';
-            input.value = item.marketValue;
-            // Adicionando um atributo de dados para identificar o item
-            input.setAttribute('data-itemname', itemName);
+        const requirements = parentRecipe ? parentRecipe.requirements : recipe.requirements;
 
-            inputColDiv.appendChild(input);
-            rowDiv.appendChild(labelColDiv);
-            rowDiv.appendChild(inputColDiv);
-            itemsDiv.appendChild(rowDiv);
-        }
-    });
+        Object.keys(requirements).forEach(itemName => {
+            const item = craftsManager.getItem(itemName);
+            if (item) {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'row';
+
+                const labelColDiv = document.createElement('div');
+                labelColDiv.className = 'col-6';
+                const label = document.createElement('label');
+
+                // Criar indentação visual
+                const indentSpan = document.createElement('span');
+                indentSpan.innerHTML = '&nbsp;'.repeat(level * 4); // Usar entidades HTML para espaços
+                label.appendChild(indentSpan);
+
+                const textContent = `${requirements[itemName]} x ${itemName}`; // Inclui a quantidade
+                const textNode = document.createTextNode(textContent);
+                label.appendChild(textNode);
+
+                labelColDiv.appendChild(label);
+                rowDiv.appendChild(labelColDiv);
+
+                const inputColDiv = document.createElement('div');
+                inputColDiv.className = 'col-6';
+                const input = document.createElement('input');
+                input.type = 'number';
+                input.className = 'form-control item-input';
+                input.value = item.marketValue;
+                input.setAttribute('data-itemname', itemName);
+                input.addEventListener('change', (event) => {
+                    const itemNameToUpdate = event.target.getAttribute('data-itemname');
+                    const newValue = event.target.value;
+                    document.querySelectorAll(`input[data-itemname="${itemNameToUpdate}"]`).forEach(input => {
+                        input.value = newValue;
+                    });
+                });
+
+                inputColDiv.appendChild(input);
+                rowDiv.appendChild(inputColDiv);
+                itemsDiv.appendChild(rowDiv);
+            }
+
+            // Chamada recursiva para itens de sub-receitas com um nível de indentação maior
+            const childRecipe = craftsManager.recipes.get(itemName);
+            if (childRecipe) {
+                addItemsRecursively(itemName, level + 1, childRecipe);
+            }
+        });
+    }
+
+    addItemsRecursively(recipeName);
 }
 
 function populateRecipeSelect() {
@@ -103,14 +164,11 @@ function getItemsForRecipe(recipeName, itemsSet = new Set()) {
 }
 
 function displayCostReport(costDetails, reportType) {
-    // Usa o reportType para obter a string correspondente
-    let reportTypeName = reportTypeNames[reportType] || "Relatório Desconhecido";
-
-    let reportHtml = `<div><strong>${reportTypeName}:</strong></div>`;
+    let reportHtml = `<div><strong>Relatório:</strong></div>`;
     let totalCost = 0;
 
     costDetails.forEach(detail => {
-        reportHtml += `- ${detail.itemName} x${detail.quantity} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})<br/>`;
+        reportHtml += `- ${detail.quantity} x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})<br/>`;
         totalCost += detail.totalCost;
     });
 
@@ -148,7 +206,26 @@ function generateCostReportFromUI() {
 function showTotalPrice() {
     const itemName = document.getElementById('receitaSelect').value;
     const quantity = parseInt(document.getElementById('quantidade').value, 10);
-    generateCostReportFromUI(itemName, quantity);
+    document.getElementById('resultado').innerHTML = ''; // Limpar relatórios anteriores
+
+    // Coletando valores atualizados dos inputs e atualizando no craftsManager
+    document.querySelectorAll('.item-input').forEach(input => {
+        const itemName = input.getAttribute('data-itemname');
+        const newValue = parseFloat(input.value);
+        const item = craftsManager.getItem(itemName);
+        if (item) {
+            item.marketValue = newValue; // Atualiza o valor de mercado do item
+        }
+    });
+
+    // Executa o cálculo depois de atualizar os valores
+    const options = {
+        ignorarMateriais: document.getElementById('ignorarMateriais').checked,
+        ignorarItens: document.getElementById('ignorarItens').checked
+    };
+
+    let costDetails = craftsManager.calculateCraftingCost(itemName, quantity, options);
+    displayCostReport(costDetails, 1); // Supondo que a função de exibição do relatório foi adaptada conforme necessário
 }
 
 // Initialization

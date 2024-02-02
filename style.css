@@ -1,25 +1,105 @@
+/* Estilos Base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
-}
-
-#craftForm {
-    margin-bottom: 20px;
-}
-
-#resultado, #itensReceita {
-    background-color: #f7f7f7;
-    border: 1px solid #e9ecef;
-    padding: 10px;
+.theme-toggle-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1em;
+    transition: color 0.3s;
 }
 
 option:disabled {
     background-color: #fff069; /* Cor de fundo para opções desabilitadas */
     color: #000000; /* Cor do texto para opções desabilitadas */
+}
+
+/* Cores e estilos para o modo claro */
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode .header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.light-mode .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.light-mode .form-control {
+    background-color: #ffffff;
+    color: #495057;
+}
+
+.light-mode .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Cores e estilos para o modo escuro */
+.dark-mode {
+    background-color: #121212;
+    color: #e7e7e7;
+}
+
+.dark-mode .header {
+    background-color: #343a40;
+    border-bottom: 1px solid #454d55;
+}
+
+.dark-mode .btn-primary {
+    background-color: #007bff;
+    border-color: #0069d9;
+}
+
+.dark-mode .form-control {
+    background-color: #6c757d;
+    color: #e9ecef;
+}
+
+.dark-mode .form-control:focus {
+    border-color: #5a6268;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Ajustes para todos os componentes em modo escuro */
+.dark-mode input, .dark-mode select, .dark-mode button, .dark-mode .btn {
+    background-color: #6c757d;
+    color: #e9ecef;
+    border-color: #6c757d;
+}
+
+.dark-mode option {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode .navbar,
+.dark-mode .navbar-light.bg-light {
+    background-color: #343a40 !important; /* Ajusta a cor de fundo no modo escuro */
+    color: #ffffff !important;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #ffffff !important; /* Assegura que os links fiquem visíveis em modo escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
