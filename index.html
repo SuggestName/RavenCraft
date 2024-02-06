@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Custo de Crafting</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="light-mode">
@@ -78,18 +79,21 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Seus scripts -->
-    <script src="utils/DOMUtils.js"></script>
-    <script src="utils/Formatter.js"></script>
+    <!-- scripts -->
+    <script src="js/Models/Item.js"></script>
+    <script src="js/Models/Recipe.js"></script>
 
-    <script src="js/Item.js"></script>
-    <script src="js/Recipe.js"></script>
-    <script src="js/CraftsManager.js"></script>
+    <script src="js/utils/DOMUtils.js"></script>
+    <script src="js/utils/Formatter.js"></script>
+    <script src="js/utils/CraftsManager.js"></script>
 
-    <script src="js/ItemsList.js"></script>
-    <script src="js/RecipesList.js"></script>
+    <script src="js/utils/RecipeUI.js"></script>
+    <script src="js/utils/ThemeToggle.js"></script>
 
-    <script src="script.js"></script>
+    <script src="js/data/Items.js"></script>
+    <script src="js/data/Recipes.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
