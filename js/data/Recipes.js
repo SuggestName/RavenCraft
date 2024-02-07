@@ -132,6 +132,62 @@ craftsManager.addRecipe(new Recipe("Coarse Thread", { "Cotton": 3 }, {}, "Weavin
 craftsManager.addRecipe(new Recipe("Craftman's Thread", { "Cotton": 6 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Fine Thread", { "Cotton": 9 }, {}, "Weaving"));
 
+craftsManager.addRecipe(new Recipe("T1 Cloth", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Shadecloth Full Set", { "T1 Shadecloth Helmet": 1, "T1 Shadecloth Armor": 1, "T1 Shadecloth Legs": 1, "T1 Shadecloth Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Shadecloth Helmet", { "Simple Cloth": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Shadecloth Armor", { "Simple Cloth": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Shadecloth Legs", { "Simple Cloth": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Shadecloth Boots", { "Simple Cloth": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T2 Cloth", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Viper's Full Set", { "T2 Viper's Helmet": 1, "T2 Viper's Armor": 1, "T2 Viper's Legs": 1, "T2 Viper's Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Viper's Helmet", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Helmet": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Viper's Armor", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Armor": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Viper's Legs", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Legs": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Viper's Boots", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Boots": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T3 Cloth", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Profane Full Set", { "T3 Profane Helmet": 1, "T3 Profane Armor": 1, "T3 Profane Legs": 1, "T3 Profane Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Profane Helmet", { "Shell Fragment": 3, "Craftman's Cloth": 3, "Craftman's Thread": 2, "T2 Viper's Helmet": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Profane Armor", { "Shell Fragment": 3, "Craftman's Cloth": 3, "Craftman's Thread": 2, "T2 Viper's Armor": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Profane Legs", { "Shell Fragment": 3, "Craftman's Cloth": 2, "Craftman's Thread": 3, "T2 Viper's Legs": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Profane Boots", { "Shell Fragment": 3, "Craftman's Cloth": 2, "Craftman's Thread": 3, "T2 Viper's Boots": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T4 Cloth", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Celestial Full Set", { "T4 Celestial Helmet": 1, "T4 Celestial Armor": 1, "T4 Celestial Legs": 1, "T4 Celestial Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Celestial Helmet", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Helmet": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Celestial Armor", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Armor": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Celestial Legs", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Legs": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Celestial Boots", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Boots": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T1 Leather", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Hide Full Set", { "T1 Hide Helmet": 1, "T1 Hide Armor": 1, "T1 Hide Legs": 1, "T1 Hide Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Hide Helmet", { "Coarse Leather": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Hide Armor", { "Coarse Leather": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Hide Legs", { "Coarse Leather": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T1 Hide Boots", { "Coarse Leather": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T2 Leather", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Nomad Full Set", { "T2 Nomad Helmet": 1, "T2 Nomad Armor": 1, "T2 Nomad Legs": 1, "T2 Nomad Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Nomad Helmet", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Helmet": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Nomad Armor", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Armor": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Nomad Legs", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Legs": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T2 Nomad Boots", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Boots": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T3 Leather", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Bruiser Full Set", { "T3 Bruiser Helmet": 1, "T3 Bruiser Armor": 1, "T3 Bruiser Legs": 1, "T3 Bruiser Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Bruiser Helmet", { "Shell Fragment": 3, "Craftman's Leather": 3, "Craftman's Thread": 2, "T2 Nomad Helmet": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Bruiser Armor", { "Shell Fragment": 3, "Craftman's Leather": 3, "Craftman's Thread": 2, "T2 Nomad Armor": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Bruiser Legs", { "Shell Fragment": 3, "Craftman's Leather": 2, "Craftman's Thread": 3, "T2 Nomad Legs": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T3 Bruiser Boots", { "Shell Fragment": 3, "Craftman's Leather": 2, "Craftman's Thread": 3, "T2 Nomad Boots": 1 }, {}, "Weaving"));
+
+craftsManager.addRecipe(new Recipe("T4 Leather", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Outlaw Full Set", { "T4 Outlaw Helmet": 1, "T4 Outlaw Armor": 1, "T4 Outlaw Legs": 1, "T4 Outlaw Boots": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Outlaw Helmet", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Helmet": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Outlaw Armor", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Armor": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Outlaw Legs", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Legs": 1 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("T4 Outlaw Boots", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Boots": 1 }, {}, "Weaving"));
+
 craftsManager.addRecipe(new Recipe("Weavin Craft T1", {}, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T1 Loom Full Set", { "T1 Loom Apprentice Helmet": 1, "T1 Loom Apprentice Armor": 1, "T1 Loom Apprentice Legs": 1, "T1 Loom Apprentice Boots": 1, "T1 Loom Apprentice Gloves": 1 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T1 Loom Apprentice Helmet", { "Craftman's Thread": 5, "Craftman's Cloth": 3 }, {}, "Weaving"));
@@ -195,62 +251,6 @@ craftsManager.addRecipe(new Recipe("T2 Woodworker Armor", { "Tanned Leather": 8,
 craftsManager.addRecipe(new Recipe("T2 Woodworker Legs", { "Tanned Leather": 3, "Fine Thread": 8, "T1 Workshop Assistant Legs": 1 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T2 Woodworker Boots", { "Tanned Leather": 3, "Fine Thread": 8, "T1 Workshop Assistant Boots": 1 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T2 Woodworker Gloves", { "Tanned Leather": 12, "Fine Thread": 9, "T1 Workshop Assistant Gloves": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T1 Cloth", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Shadecloth Full Set", { "T1 Shadecloth Helmet": 1, "T1 Shadecloth Armor": 1, "T1 Shadecloth Legs": 1, "T1 Shadecloth Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Shadecloth Helmet", { "Simple Cloth": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Shadecloth Armor", { "Simple Cloth": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Shadecloth Legs", { "Simple Cloth": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Shadecloth Boots", { "Simple Cloth": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T2 Cloth", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Viper's Full Set", { "T2 Viper's Helmet": 1, "T2 Viper's Armor": 1, "T2 Viper's Legs": 1, "T2 Viper's Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Viper's Helmet", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Helmet": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Viper's Armor", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Armor": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Viper's Legs", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Legs": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Viper's Boots", { "Simple Cloth": 1, "Coarse Thread": 1, "T1 Shadecloth Boots": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T3 Cloth", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Profane Full Set", { "T3 Profane Helmet": 1, "T3 Profane Armor": 1, "T3 Profane Legs": 1, "T3 Profane Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Profane Helmet", { "Shell Fragment": 3, "Craftman's Cloth": 3, "Craftman's Thread": 2, "T2 Viper's Helmet": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Profane Armor", { "Shell Fragment": 3, "Craftman's Cloth": 3, "Craftman's Thread": 2, "T2 Viper's Armor": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Profane Legs", { "Shell Fragment": 3, "Craftman's Cloth": 2, "Craftman's Thread": 3, "T2 Viper's Legs": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Profane Boots", { "Shell Fragment": 3, "Craftman's Cloth": 2, "Craftman's Thread": 3, "T2 Viper's Boots": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T4 Cloth", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Celestial Full Set", { "T4 Celestial Helmet": 1, "T4 Celestial Armor": 1, "T4 Celestial Legs": 1, "T4 Celestial Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Celestial Helmet", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Helmet": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Celestial Armor", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Armor": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Celestial Legs", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Legs": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Celestial Boots", { "Phantasmagorical Cloth": 5, "Silk": 3, "Fine Thread": 3, "T3 Profane Boots": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T1 Leather", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Hide Full Set", { "T1 Hide Helmet": 1, "T1 Hide Armor": 1, "T1 Hide Legs": 1, "T1 Hide Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Hide Helmet", { "Coarse Leather": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Hide Armor", { "Coarse Leather": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Hide Legs", { "Coarse Leather": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T1 Hide Boots", { "Coarse Leather": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T2 Leather", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Nomad Full Set", { "T2 Nomad Helmet": 1, "T2 Nomad Armor": 1, "T2 Nomad Legs": 1, "T2 Nomad Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Nomad Helmet", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Helmet": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Nomad Armor", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Armor": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Nomad Legs", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Legs": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T2 Nomad Boots", { "Coarse Leather": 1, "Coarse Thread": 1, "T1 Hide Boots": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T3 Leather", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Bruiser Full Set", { "T3 Bruiser Helmet": 1, "T3 Bruiser Armor": 1, "T3 Bruiser Legs": 1, "T3 Bruiser Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Bruiser Helmet", { "Shell Fragment": 3, "Craftman's Leather": 3, "Craftman's Thread": 2, "T2 Nomad Helmet": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Bruiser Armor", { "Shell Fragment": 3, "Craftman's Leather": 3, "Craftman's Thread": 2, "T2 Nomad Armor": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Bruiser Legs", { "Shell Fragment": 3, "Craftman's Leather": 2, "Craftman's Thread": 3, "T2 Nomad Legs": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T3 Bruiser Boots", { "Shell Fragment": 3, "Craftman's Leather": 2, "Craftman's Thread": 3, "T2 Nomad Boots": 1 }, {}, "Weaving"));
-
-craftsManager.addRecipe(new Recipe("T4 Leather", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Outlaw Full Set", { "T4 Outlaw Helmet": 1, "T4 Outlaw Armor": 1, "T4 Outlaw Legs": 1, "T4 Outlaw Boots": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Outlaw Helmet", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Helmet": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Outlaw Armor", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Armor": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Outlaw Legs", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Legs": 1 }, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("T4 Outlaw Boots", { "Kaiman Scale": 5, "Tanned Leather": 3, "Fine Thread": 3, "T3 Bruiser Boots": 1 }, {}, "Weaving"));
 
 // --- Cooking --- //
 craftsManager.addRecipe(new Recipe("Baked Goods", {}, {}, "Cooking"));
