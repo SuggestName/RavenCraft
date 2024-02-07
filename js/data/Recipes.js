@@ -1,44 +1,55 @@
 // --- Carpentry --- //
 craftsManager.addRecipe(new Recipe("Materiais Carpentry", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Rough Plank", { "Small Log": 6 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Dense Plank", { "Dense Log": 4 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Refined Plank", { "Heavy Log": 8 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Treated Plank", { "Oil": 2, "Heavy Log": 12 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Heavy Plank", { "Oil": 2, "Dense Log": 8 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Sturdy Plank", { "Oil": 4, "Sturdy Log": 10 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Fine Plank", { "Oil": 6, "Fine Log": 10 }, {}, "Carpentry"));
 
 craftsManager.addRecipe(new Recipe("Bow", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Oakwood Bow", { "Coarse Thread": 1, "Rough Plank": 3 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Viper's Bow", { "Coarse Thread": 2, "Rough Plank": 6, "T1 Oakwood Bow": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T3 Black Ash Bow", { "Sea Cured Leather": 12, "Refined Plank": 10, "Craftman's Thread": 5, "T2 Viper's Bow": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T4 Bullseye Bow", { "Sturdy String": 20, "Treated Plank": 10, "Fine Thread": 5, "T3 Black Ash Bow": 1 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("T5 Predator Bow", { "Hardwood": 24, "Sturdy Plank": 32, "Merchant's Thread": 14, "T4 Bullseye Bow": 1 }, {}, "Carpentry"));
 
 craftsManager.addRecipe(new Recipe("Tower Shield", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Wooden Bulwark", { "Rough Plank": 2 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Sentinel Shield", { "Rough Plank": 3, "Copper Ingot": 3, "T1 Wooden Bulwark": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T3 Defender's Bulwak", { "Sea Cured Leather": 6, "Refined Plank": 6, "Iron Ingot": 8, "T2 Sentinel Shield": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T4 Steelclad Bulwak", { "Rough Steel Plate": 10, "Treated Plank": 12, "Steel Ingot": 10, "T3 Defender's Bulwak": 1 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("T5 King's Defender", { "Heavy Metal Chunks": 12, "Sturdy Plank": 20, "Cobalt Ingot": 18, "T4 Steelclad Bulwak": 1 }, {}, "Carpentry"));
 
 craftsManager.addRecipe(new Recipe("Staff", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Mystic Staff", { "Rough Plank": 4 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Warlock Staff", { "Rough Plank": 8, "T1 Mystic Staff": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T3 Cultist Staff", { "Troll Fang": 12, "Refined Plank": 16, "Iron Ingot": 8, "T2 Warlock Staff": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T4 Celestial Staff", { "Ambersprite Shard": 20, "Treated Plank": 12, "T3 Cultist Staff": 1 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("T5 Lightshard Staff", { "Enervating Core": 24, "Sturdy Plank": 52, "T4 Celestial Staff": 1 }, {}, "Carpentry"));
 
 craftsManager.addRecipe(new Recipe("Bucker Shield", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Wooden Buckler", { "Rough Plank": 2 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Sturdy Buckler", { "Rough Plank": 3, "Coarse Leather": 1, "T1 Wooden Buckler": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T3 Marauder's Shield", { "Sea Cured Leather": 6, "Refined Plank": 5, "Craftman's Leather": 2, "T2 Sturdy Buckler": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T4 Rune Shield", { "Rough Steel Plate": 10, "Treated Plank": 12, "Tanned Leather": 10, "T3 Marauder's Shield": 1 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("T5 Ravenguard's Shield", { "Heavy Metal Chunks": 12, "Sturdy Plank": 20, "Merchant's Leather": 4, "T4 Rune Shield": 1 }, {}, "Carpentry"));
 
 craftsManager.addRecipe(new Recipe("Sceptre", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Knotted Sceptre", { "Rough Plank": 2 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Tribal Sceptre", { "Rough Plank": 4, "T1 Knotted Sceptre": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T3 Serpent Sceptre", { "Troll Fang": 6, "Refined Plank": 10, "Iron Ingot": 8, "T2 Tribal Sceptre": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T4 Crystal Sceptre", { "Ambersprite Shard": 10, "Treated Plank": 15, "T3 Serpent Sceptre": 1 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("T5 Celestial Sceptre", { "Enervating Core": 12, "Sturdy Plank": 26, "T4 Crystal Sceptre": 1 }, {}, "Carpentry"));
 
 // --- Blacksmithing --- //
 craftsManager.addRecipe(new Recipe("Ingots", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Copper Ingot", { "Copper Ore": 5 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Iron Ingot", { "Iron Ore": 5 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Steel Ingot", { "Coal": 2, "Iron Ore": 5 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("Cobalt Ingot", { "Coal": 3, "Cobalt Ore": 5 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("Titanium Ingot", { "Coal": 4, "Titanium Ore": 5 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("T1 Pliant Set", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Pliant Full Set", { "T1 Pliant Helmet": 1, "T1 Pliant Armor": 1, "T1 Pliant Legs": 1, "T1 Pliant Boots": 1 }, {}, "Blacksmithing"));
@@ -73,48 +84,56 @@ craftsManager.addRecipe(new Recipe("T1 Shipbuilding Mallet", { "Copper Ingot": 8
 craftsManager.addRecipe(new Recipe("T2 Crushing Hammer", { "Copper Ingot": 8, "Coarse Leather": 4, "T1 Shipbuilding Mallet": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Punisher's Gavel", { "Sea Cured Leather": 12, "Iron Ingot": 20, "Craftman's Leather": 8, "T2 Crushing Hammer": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Lawgiver's Warhammer", { "Rough Steel Plate": 20, "Steel Ingot": 25, "Tanned Leather": 17, "T3 Punisher's Gavel": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Samurai's Daikatana", { "Heavy Metal Chunks": 24, "Cobalt Ingot": 60, "Merchant's Leather": 22, "T4 Lawgiver's Warhammer": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Greatsword", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Burnished Greatsword", { "Copper Ingot": 8 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Valiant Greatsword", { "Copper Ingot": 6, "Coarse Leather": 6, "T1 Burnished Greatsword": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Heroic Greatsword", { "Troll Fang": 12, "Iron Ingot": 10, "Craftman's Leather": 10, "T2 Valiant Greatsword": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Bonebiter Greatsword", { "Thin Blade": 20, "Steel Ingot": 12, "Tanned Leather": 20, "T3 Heroic Greatsword": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Samurai's Daikatana", { "Ancient Metallic Scrap": 24, "Cobalt Ingot": 20, "Merchant's Leather": 30, "T4 Bonebiter Greatsword": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Light Blade", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Skirmisher's Blade", { "Copper Ingot": 8 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Swashbuckler's Blade", { "Copper Ingot": 6, "Coarse Leather": 6, "T1 Skirmisher's Blade": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Serpentine Blade", { "Troll Fang": 12, "Iron Ingot": 10, "Craftman's Leather": 10, "T2 Swashbuckler's Blade": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Duelist's Companion", { "Cunning Handle": 10, "Steel Ingot": 12, "Tanned Leather": 20, "T3 Serpentine Blade": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Ornamented Saber", { "Twisted Blades": 24, "Cobalt Ingot": 20, "Merchant's Leather": 30, "T4 Duelist's Companion": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Sword", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Rough Sword", { "Copper Ingot": 4 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Warden's Sword", { "Copper Ingot": 4, "Coarse Leather": 2, "T1 Rough Sword": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Lawbreaker's Sword", { "Troll Fang": 6, "Iron Ingot": 5, "Craftman's Leather": 5, "T2 Warden's Sword": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Guardian's Longsword", { "Thin Blade": 10, "Steel Ingot": 7, "Tanned Leather": 10, "T3 Lawbreaker's Sword": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Crusaider's Longsword", { "Ancient Metallic Scrap": 12, "Cobalt Ingot": 10, "Merchant's Leather": 15, "T4 Guardian's Longsword": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Club", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Solid Mace", { "Copper Ingot": 4 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Studded Flail", { "Copper Ingot": 3, "Coarse Leather": 3, "T1 Solid Mace": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Shieldbreaker's Flail", { "Sea Cured Leather": 6, "Iron Ingot": 10, "Craftman's Leather": 4, "T2 Studded Flail": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Ravenguard Morningstar", { "Rough Steel Plate": 10, "Steel Ingot": 16, "Tanned Leather": 8, "T3 Shieldbreaker's Flail": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Enforcer's Mace", { "Heavy Metal Chunks": 12, "Cobalt Ingot": 30, "Merchant's Leather": 11, "T4 Ravenguard Morningstar": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Dagger", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Serrated Dagger", { "Copper Ingot": 4 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Noble Dagger", { "Copper Ingot": 4, "Coarse Leather": 2, "T1 Serrated Dagger": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Ice Dagger", { "Troll Fang": 6, "Iron Ingot": 5, "Craftman's Leather": 5, "T2 Noble Dagger": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Heartstopper Dagger", { "Cunning Handle": 10, "Steel Ingot": 7, "Tanned Leather": 10, "T3 Ice Dagger": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Assassin's Dagger", { "Twisted Blades": 12, "Cobalt Ingot": 10, "Merchant's Leather": 15, "T4 Heartstopper Dagger": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Axe", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Wicked Axe", { "Copper Ingot": 4 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Marauder's Axe", { "Copper Ingot": 3, "Coarse Leather": 3, "T1 Wicked Axe": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Dread Axe", { "Sea Cured Leather": 12, "Iron Ingot": 10, "Craftman's Leather": 4, "T2 Marauder's Axe": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Stormcarver Axe", { "Metallic Core": 10, "Steel Ingot": 16, "Tanned Leather": 8, "T3 Dread Axe": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Hellblade Axe", { "Cutting Edge Scrap": 12, "Cobalt Ingot": 30, "Merchant's Leather": 11, "T4 Stormcarver Axe": 1 }, {}, "Blacksmithing"));
 
 craftsManager.addRecipe(new Recipe("Greataxe", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T1 Rough Greataxe", { "Copper Ingot": 8 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T2 Warrior's Greataxe", { "Copper Ingot": 8, "Coarse Leather": 4, "T1 Rough Greataxe": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T3 Savage Battle Axe", { "Sea Cured Leather": 12, "Iron Ingot": 20, "Craftman's Leather": 8, "T2 Warrior's Greataxe": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("T4 Hangman's Greataxe", { "Metallic Core": 20, "Steel Ingot": 25, "Tanned Leather": 8, "T3 Savage Battle Axe": 1 }, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("T5 Orcish Battle Axe", { "Cutting Edge Scrap": 24, "Cobalt Ingot": 60, "Merchant's Leather": 22, "T4 Hangman's Greataxe": 1 }, {}, "Blacksmithing"));
 
 // --- Weaving --- //
 craftsManager.addRecipe(new Recipe("Cloth", {}, {}, "Weaving"));
@@ -126,6 +145,7 @@ craftsManager.addRecipe(new Recipe("Leather", {}, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Coarse Leather", { "Hide": 2 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Craftman's Leather", { "Hide": 4 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Tanned Leather", { "Hide": 6 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("Merchant's Leather", { "Hide": 8 }, {}, "Weaving"));
 
 craftsManager.addRecipe(new Recipe("Threads", {}, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Coarse Thread", { "Cotton": 3 }, {}, "Weaving"));
