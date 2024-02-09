@@ -108,3 +108,45 @@ body {
         justify-content: space-between;
     }
 }
+
+/* Ajustes para todos os componentes em modo escuro */
+.dark-mode input,
+.dark-mode select,
+.dark-mode button,
+.dark-mode .btn,
+.dark-mode .select2-container--default .select2-selection--single,
+.dark-mode .select2-container--default .select2-selection--single .select2-selection__rendered,
+.dark-mode .select2-container--default .select2-results__option {
+    background-color: #6c757d;
+    color: #e9ecef;
+    border-color: #6c757d;
+}
+
+/* Ajustes adicionais específicos para o Select2 no modo escuro */
+.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #e9ecef transparent transparent transparent;
+}
+
+.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow {
+    border-color: #6c757d transparent transparent transparent;
+}
+
+.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow:hover b {
+    border-color: #e9ecef transparent transparent transparent;
+}
+
+.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow:hover {
+    border-color: #6c757d transparent transparent transparent;
+}
+
+/* Destaque para opções desabilitadas */
+.dark-mode .select2-container--default .select2-results__option[aria-disabled=true] {
+    background-color: #495057; /* Cor de fundo para opções desabilitadas */
+    color: #868e96; /* Cor do texto para opções desabilitadas */
+}
+
+/* Hover para opções */
+.dark-mode .select2-container--default .select2-results__option:hover {
+    background-color: #343a40; /* Cor de fundo para o hover nas opções */
+    color: #ffffff; /* Cor do texto para o hover nas opções */
+}

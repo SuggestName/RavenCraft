@@ -1,8 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+$(document).ready(function () {
+    $("#receitaSelect").select2({
+    });
     initializeApp();
 });
 
 function initializeApp() {
+   
     initializeRecipeUI()
     initializeThemeToggle()
 }
