@@ -150,3 +150,8 @@ body {
     background-color: #343a40; /* Cor de fundo para o hover nas opções */
     color: #ffffff; /* Cor do texto para o hover nas opções */
 }
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 50vh; /* Ajuste para a altura desejada */
+    overflow-y: auto;
+}

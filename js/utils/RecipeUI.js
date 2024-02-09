@@ -18,6 +18,13 @@ function handleRecipeSelectChange() {
 
 function populateRecipeGroupMenu() {
     const recipeGroups = craftsManager.getRecipeGroups();
+
+    let liAll = DOMUtils.createElement('li', { 'class': 'nav-item' });
+    let aAll = DOMUtils.createElement('a', { 'class': 'nav-link', 'href': '#' }, 'Todos');
+    aAll.onclick = () => filterRecipesByGroup('Todos');
+    liAll.appendChild(aAll);
+    DOMUtils.appendChild('tipoReceitaMenu', liAll);
+
     recipeGroups.forEach(group => {
         let li = DOMUtils.createElement('li', { 'class': 'nav-item' });
         let a = DOMUtils.createElement('a', { 'class': 'nav-link', 'href': '#' }, group);
@@ -28,7 +35,13 @@ function populateRecipeGroupMenu() {
 }
 
 function filterRecipesByGroup(group) {
-    const recipes = craftsManager.getRecipesByGroup(group);
+    let recipes;
+    if (group === 'Todos') {
+        recipes = Array.from(craftsManager.recipes.values());
+    } else {
+        recipes = craftsManager.getRecipesByGroup(group);
+    }
+
     let recipeSelect = document.getElementById('receitaSelect');
     DOMUtils.clearElement('receitaSelect');
 
@@ -42,9 +55,9 @@ function filterRecipesByGroup(group) {
         recipeSelect.appendChild(option);
     });
 
-    recipeSelect = document.getElementById('receitaSelect').value;
-    populateItemsList(recipeSelect);
+    populateItemsList(recipeSelect.value);
 }
+
 
 function populateItemsList(recipeName) {
     const itemsDiv = document.getElementById('itensReceita');
