@@ -44,7 +44,7 @@ craftsManager.addRecipe(new Recipe("T3 Serpent Sceptre", { "Troll Fang": 6, "Ref
 craftsManager.addRecipe(new Recipe("T4 Crystal Sceptre", { "Ambersprite Shard": 10, "Treated Plank": 15, "T3 Serpent Sceptre": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T5 Celestial Sceptre", { "Enervating Core": 12, "Sturdy Plank": 26, "T4 Crystal Sceptre": 1 }, {}, "Carpentry"));
 
-craftsManager.addRecipe(new Recipe("Fishing", {}, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Fishing ", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Fishing Stick", { "Coarse Thread": 1, "Rough Plank": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Fishing Rod", { "Coarse Thread": 2, "Rough Plank": 2, "Fishing Stick": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Craftman's Fishing Rod", { "Craftman's Thread": 3, "Refined Plank": 3, "Fishing Rod": 1 }, {}, "Carpentry"));
