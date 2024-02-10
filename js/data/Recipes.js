@@ -51,7 +51,7 @@ craftsManager.addRecipe(new Recipe("Craftman's Fishing Rod", { "Craftman's Threa
 craftsManager.addRecipe(new Recipe("Sailor's Fishing Rod", { "Fine Thread": 5, "Treated Plank": 3, "Craftman's Fishing Rod": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Artisan Fishing Rod", { "Merchant's Thread": 5, "Sturdy Plank": 3, "Sailor's Fishing Rod": 1 }, {}, "Carpentry"));
 
-craftsManager.addRecipe(new Recipe("House Crafting", {}, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("House Craft  ", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Weak Table", { "Rough Plank": 8, "Nail": 2 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Frail Loom", { "Rough Plank": 10, "Simple Cloth": 6 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Protective Charm", { "Rough Plank": 10, "Simple Cloth": 6 }, {}, "Carpentry"));
@@ -200,7 +200,7 @@ craftsManager.addRecipe(new Recipe("Steel Fishing Hook", { "Steel Ingot": 15, "C
 craftsManager.addRecipe(new Recipe("Cobalt Fishing Hook", { "Cobalt Ingot": 25, "Steel Fishing Hook": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Titanium Fishing Hook", { "Titanium Ingot": 60, "Cobalt Fishing Hook": 1 }, {}, "Blacksmithing"));
 
-craftsManager.addRecipe(new Recipe("House Craft", {}, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("House Craft ", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Basic Tools", { "Copper Ingot": 10, "Rough Plank": 4, "Coarse Leather": 1 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Copper Anvil", { "Iron Ingot": 10, "Copper Ingot": 30 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Weak Rocks", { "Steel Ingot": 35, "Iron Ingot": 70 }, {}, "Blacksmithing"));
