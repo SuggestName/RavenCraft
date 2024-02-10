@@ -8,7 +8,7 @@ craftsManager.addRecipe(new Recipe("Heavy Plank", { "Oil": 2, "Dense Log": 8 }, 
 craftsManager.addRecipe(new Recipe("Sturdy Plank", { "Oil": 4, "Sturdy Log": 10 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Fine Plank", { "Oil": 6, "Fine Log": 10 }, {}, "Carpentry"));
 
-craftsManager.addRecipe(new Recipe("Weapons", {}, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Weapons ", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Bow", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Oakwood Bow", { "Coarse Thread": 1, "Rough Plank": 3 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Viper's Bow", { "Coarse Thread": 2, "Rough Plank": 6, "T1 Oakwood Bow": 1 }, {}, "Carpentry"));
@@ -76,7 +76,7 @@ craftsManager.addRecipe(new Recipe("Medium Fishing Storage", { "Wooden Arch": 3,
 craftsManager.addRecipe(new Recipe("Medium Cargo Hold", { "Wooden Arch": 3, "Treated Plank": 50, "Nail": 40, "Iron Bar": 10 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Medium Hull Frame", { "Wooden Arch": 8, "Treated Plank": 120, "Nail": 80, "Iron Bar": 25 }, {}, "Carpentry"));
 
-craftsManager.addRecipe(new Recipe("Ship Module", {}, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("Ship Module  ", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Small Ammunition Cabin Kit", { "Wooden Arch": 2, "Treated Plank": 50, "Bolt": 10, "Steel Ingot": 10 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Small Maintenance Unit Kit", { "Wooden Arch": 2, "Treated Plank": 50, "Bolt": 10, "Steel Ingot": 10 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("Small Fishing Crane Kit", { "Wooden Arch": 2, "Treated Plank": 50, "Bolt": 10, "Steel Ingot": 10 }, {}, "Carpentry"));
@@ -227,7 +227,7 @@ craftsManager.addRecipe(new Recipe("Composed Headgear", { "Iron Ingot": 11, "Coa
 craftsManager.addRecipe(new Recipe("Advanced Headgear", { "Iron Ingot": 20, "Craftman's Leather": 7 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Artisan Headgear", { "Steel Ingot": 25, "Tanned Leather": 17 }, {}, "Blacksmithing"));
 
-craftsManager.addRecipe(new Recipe("Ship Module", {}, {}, "Blacksmithing"));
+craftsManager.addRecipe(new Recipe("Ship Module ", {}, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Simple Ship Emblems Kit", { "Iron Ingot": 220, "Coal": 50, "Common Wheel": 2 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Minor Shielding Kit", { "Steel Ingot": 110, "Iron Ingot": 220 }, {}, "Blacksmithing"));
 craftsManager.addRecipe(new Recipe("Small Cannon Kit", { "Steel Ingot": 15, "Iron Ingot": 40, "Treated Plank": 10, "Common Wheel": 2 }, {}, "Blacksmithing"));
@@ -252,7 +252,7 @@ craftsManager.addRecipe(new Recipe("Craftman's Thread", { "Cotton": 6 }, {}, "We
 craftsManager.addRecipe(new Recipe("Fine Thread", { "Cotton": 9 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Merchant's Thread", { "Cotton": 12 }, {}, "Weaving"));
 
-craftsManager.addRecipe(new Recipe("Armors", {}, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("Armors ", {}, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T1 Cloth", {}, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T1 Shadecloth Full Set", { "T1 Shadecloth Helmet": 1, "T1 Shadecloth Armor": 1, "T1 Shadecloth Legs": 1, "T1 Shadecloth Boots": 1 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("T1 Shadecloth Helmet", { "Simple Cloth": 1 }, {}, "Weaving"));
