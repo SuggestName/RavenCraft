@@ -62,6 +62,23 @@ class CraftsManager {
 		return Array.from(costDetailsMap.values());
 	}
 
+	verifyAndLogMissingItems() {
+        let missingItems = new Set();
+
+        this.recipes.forEach((recipe, recipeName) => {
+			if (!this.items.has(recipeName) && !missingItems.has(recipeName) && recipe.hasRequirements()) {
+				missingItems.add(recipeName);
+				console.log(`craftsManager.addItem(new Item("${recipeName}", 0, "Material"));`);
+			}
+
+            Object.keys(recipe.requirements).forEach(itemName => {
+                if (!this.items.has(itemName) && !missingItems.has(itemName)) {
+                    missingItems.add(itemName);
+                    console.log(`craftsManager.addItem(new Item("${itemName}", 0, "Material"));`);
+                }
+            });
+        });
+    }
 }
 
 const craftsManager = new CraftsManager();

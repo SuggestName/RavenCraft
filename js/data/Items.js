@@ -38,6 +38,9 @@ craftsManager.addItem(new Item("Rough Plank", 150, "Material"));
 craftsManager.addItem(new Item("Treated Plank", 870, "Material"));
 craftsManager.addItem(new Item("Refined Plank", 410, "Material"));
 craftsManager.addItem(new Item("Sturdy Plank", 0, "Material"));
+craftsManager.addItem(new Item("Dense Plank", 12000, "Material"));
+craftsManager.addItem(new Item("Heavy Plank", 13500, "Material"));
+craftsManager.addItem(new Item("Fine Plank", 0, "Material"));
 
 craftsManager.addItem(new Item("Coarse Thread", 570, "Material"));
 craftsManager.addItem(new Item("Fine Thread", 2160, "Material"));
@@ -76,6 +79,12 @@ craftsManager.addItem(new Item("T2 Tribal Sceptre", 650, "Item"));
 craftsManager.addItem(new Item("T3 Serpent Sceptre", 9000, "Item"));
 craftsManager.addItem(new Item("T4 Crystal Sceptre", 190000, "Item"));
 craftsManager.addItem(new Item("T5 Celestial Sceptre", 0, "Item"));
+
+craftsManager.addItem(new Item("Fishing Stick", 1470, "Item"));
+craftsManager.addItem(new Item("Fishing Rod", 4890, "Item"));
+craftsManager.addItem(new Item("Craftman's Fishing Rod", 11750, "Item"));
+craftsManager.addItem(new Item("Sailor's Fishing Rod", 84000, "Item"));
+craftsManager.addItem(new Item("Artisan Fishing Rod", 0, "Item"));
 
 // ------- Blacksmithing ------- //
 craftsManager.addItem(new Item("Copper Ingot", 130, "Material"));
@@ -157,6 +166,9 @@ craftsManager.addItem(new Item("T5 Orcish Battle Axe", 0, "Item"));
 craftsManager.addItem(new Item("Craftman's Cloth", 1350, "Material"));
 craftsManager.addItem(new Item("Silk", 2550, "Material"));
 craftsManager.addItem(new Item("Simple Cloth", 445, "Material"));
+
+craftsManager.addItem(new Item("Merchant's Thread", 0, "Material"));
+craftsManager.addItem(new Item("Merchant's Leather", 0, "Material"));
 
 craftsManager.addItem(new Item("T1 Loom Apprentice Helmet", 8900, "Item"));
 craftsManager.addItem(new Item("T1 Loom Apprentice Armor", 8900, "Item"));
@@ -281,3 +293,43 @@ craftsManager.addItem(new Item("Gourmet Seasoning", 185, "Material"));
 craftsManager.addItem(new Item("Brewer Yeast", 125, "Material"));
 craftsManager.addItem(new Item("Seafood Seasoning", 33, "Material"));
 craftsManager.addItem(new Item("Oil", 170, "Material"));
+
+// Separar
+craftsManager.addItem(new Item("Bolt", 2500, "Material"));
+craftsManager.addItem(new Item("Common Plate", 8300, "Material"));
+craftsManager.addItem(new Item("Reinforced Plate", 83000, "Material"));
+craftsManager.addItem(new Item("Titanium Ore", 2850, "MateriaPrima"));
+craftsManager.addItem(new Item("Twisted Blades", 0, "MateriaPrima"));
+craftsManager.addItem(new Item("T4 Stormcarver Axe", 80000, "Item"));
+craftsManager.addItem(new Item("Stone", 31, "MateriaPrima"));
+craftsManager.addItem(new Item("Copper Fishing Hook", 372, "Item"));
+craftsManager.addItem(new Item("Complex Fishing Hook", 16000, "Item"));
+craftsManager.addItem(new Item("Steel Fishing Hook", 80000, "Item"));
+craftsManager.addItem(new Item("Cobalt Fishing Hook", 0, "Item"));
+craftsManager.addItem(new Item("Common Wheel", 6900, "Material"));
+craftsManager.addItem(new Item("Merchant's Cloth", 0, "Material"));
+
+craftsManager.addItem(new Item("Weak Table", 3110, "Material"));
+craftsManager.addItem(new Item("Nail", 175, "Material"));
+craftsManager.addItem(new Item("Frail Loom", 0, "Material"));
+craftsManager.addItem(new Item("Protective Charm", 0, "Material"));
+craftsManager.addItem(new Item("Basic Stabilizer", 2300, "Material"));
+craftsManager.addItem(new Item("Storage Container", 5000, "Material"));
+craftsManager.addItem(new Item("Chair", 1500, "Material"));
+craftsManager.addItem(new Item("Simple Bed", 30000, "Material"));
+craftsManager.addItem(new Item("Wall Reinforcement", 2000, "Material"));
+craftsManager.addItem(new Item("Iron Bar", 1790, "Material"));
+craftsManager.addItem(new Item("Energy Stabilizer", 14000, "Material"));
+craftsManager.addItem(new Item("Simple Loom", 30000, "Material"));
+craftsManager.addItem(new Item("Warding Charm", 30000, "Material"));
+craftsManager.addItem(new Item("Mast", 25000, "Material"));
+craftsManager.addItem(new Item("Small Gun Deck", 48000, "Material"));
+craftsManager.addItem(new Item("Small Fishing Storage", 0, "Material"));
+craftsManager.addItem(new Item("Small Cargo Hold", 45000, "Material"));
+craftsManager.addItem(new Item("Small Hull Frame", 60000, "Material"));
+craftsManager.addItem(new Item("Medium Gun Deck", 12000, "Material"));
+craftsManager.addItem(new Item("Wooden Arch", 13000, "Material"));
+craftsManager.addItem(new Item("Medium Fishing Storage", 81000, "Material"));
+craftsManager.addItem(new Item("Medium Cargo Hold", 85000, "Material"));
+craftsManager.addItem(new Item("Medium Hull Frame", 205000, "Material"));
+craftsManager.addItem(new Item("Small Ammunition Cabin Kit", 120000, "Material"));
