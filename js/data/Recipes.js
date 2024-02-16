@@ -13,7 +13,7 @@ craftsManager.addRecipe(new Recipe("Bow", {}, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T1 Oakwood Bow", { "Coarse Thread": 1, "Rough Plank": 3 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T2 Viper's Bow", { "Coarse Thread": 2, "Rough Plank": 6, "T1 Oakwood Bow": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T3 Black Ash Bow", { "Sea Cured Leather": 12, "Refined Plank": 10, "Craftman's Thread": 5, "T2 Viper's Bow": 1 }, {}, "Carpentry"));
-craftsManager.addRecipe(new Recipe("T4 Bullseye Bow", { "Sturdy String": 20, "Treated Plank": 10, "Fine Thread": 5, "T3 Black Ash Bow": 1 }, {}, "Carpentry"));
+craftsManager.addRecipe(new Recipe("T4 Bullseye Bow", { "Sturdy String": 20, "Treated Plank": 18, "Fine Thread": 7, "T3 Black Ash Bow": 1 }, {}, "Carpentry"));
 craftsManager.addRecipe(new Recipe("T5 Predator Bow", { "Hardwood": 24, "Sturdy Plank": 32, "Merchant's Thread": 14, "T4 Bullseye Bow": 1 }, {}, "Carpentry"));
 
 craftsManager.addRecipe(new Recipe("Tower Shield", {}, {}, "Carpentry"));

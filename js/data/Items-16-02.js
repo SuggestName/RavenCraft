@@ -1,7 +1,7 @@
 // ------- Materia Prima ------- //
 craftsManager.addItem(new Item("Small Log", 80, "MateriaPrima"));
 craftsManager.addItem(new Item("Dense Log", 2200, "MateriaPrima"));
-craftsManager.addItem(new Item("Heavy Log", 112, "MateriaPrima"));
+craftsManager.addItem(new Item("Heavy Log", 70, "MateriaPrima"));
 craftsManager.addItem(new Item("Sturdy Log", 50, "MateriaPrima"));
 craftsManager.addItem(new Item("Fine Log", 50, "MateriaPrima"));
 
@@ -11,7 +11,7 @@ craftsManager.addItem(new Item("Cobalt Ore", 295, "MateriaPrima"));
 craftsManager.addItem(new Item("Coal", 140, "MateriaPrima"));
 
 craftsManager.addItem(new Item("Hide", 425, "MateriaPrima"));
-craftsManager.addItem(new Item("Cotton", 341, "MateriaPrima"));
+craftsManager.addItem(new Item("Cotton", 250, "MateriaPrima"));
 craftsManager.addItem(new Item("Spool of Hair", 115, "MateriaPrima"));
 craftsManager.addItem(new Item("Wool", 400, "MateriaPrima"));
 
@@ -19,8 +19,8 @@ craftsManager.addItem(new Item("Wool", 400, "MateriaPrima"));
 craftsManager.addItem(new Item("Troll Fang", 1500, "MateriaPrima"));
 craftsManager.addItem(new Item("Shell Fragment", 1400, "MateriaPrima"));
 craftsManager.addItem(new Item("Internal Padding", 21500, "MateriaPrima"));
-craftsManager.addItem(new Item("Sea Cured Leather", 849, "MateriaPrima"));
-craftsManager.addItem(new Item("Sturdy String", 21000, "MateriaPrima"));
+craftsManager.addItem(new Item("Sea Cured Leather", 320, "MateriaPrima"));
+craftsManager.addItem(new Item("Sturdy String", 14300, "MateriaPrima"));
 craftsManager.addItem(new Item("Rough Steel Plate", 12500, "MateriaPrima"));
 craftsManager.addItem(new Item("Ambersprite Shard", 23000, "MateriaPrima"));
 craftsManager.addItem(new Item("Cunning Handle", 18000, "MateriaPrima"));
@@ -34,17 +34,17 @@ craftsManager.addItem(new Item("Enervating Core", 0, "MateriaPrima"));
 craftsManager.addItem(new Item("Hardwood", 25000, "MateriaPrima"));
 
 // ------- Carpentry ------- //
-craftsManager.addItem(new Item("Rough Plank", 465, "Material"));
-craftsManager.addItem(new Item("Treated Plank", 1150, "Material"));
-craftsManager.addItem(new Item("Refined Plank", 480, "Material"));
+craftsManager.addItem(new Item("Rough Plank", 150, "Material"));
+craftsManager.addItem(new Item("Treated Plank", 870, "Material"));
+craftsManager.addItem(new Item("Refined Plank", 410, "Material"));
 craftsManager.addItem(new Item("Sturdy Plank", 0, "Material"));
 craftsManager.addItem(new Item("Dense Plank", 12000, "Material"));
 craftsManager.addItem(new Item("Heavy Plank", 13500, "Material"));
 craftsManager.addItem(new Item("Fine Plank", 0, "Material"));
 
-craftsManager.addItem(new Item("Coarse Thread", 559, "Material"));
-craftsManager.addItem(new Item("Fine Thread", 2583, "Material"));
-craftsManager.addItem(new Item("Craftman's Thread", 1380, "Material"));
+craftsManager.addItem(new Item("Coarse Thread", 570, "Material"));
+craftsManager.addItem(new Item("Fine Thread", 2160, "Material"));
+craftsManager.addItem(new Item("Craftman's Thread", 1290, "Material"));
 
 craftsManager.addItem(new Item("Coarse Leather", 720, "Material"));
 craftsManager.addItem(new Item("Craftman's Leather", 1790, "Material"));
@@ -260,7 +260,7 @@ craftsManager.addItem(new Item("T4 Outlaw Boots", 0, "Item"));
 
 // ------- Cooking ------- //
 craftsManager.addItem(new Item("Potato", 70, "MateriaPrima"));
-craftsManager.addItem(new Item("Corn", 280, "MateriaPrima"));
+craftsManager.addItem(new Item("Corn", 190, "MateriaPrima"));
 craftsManager.addItem(new Item("Orange Scales", 50, "MateriaPrima"));
 craftsManager.addItem(new Item("Milk", 220, "MateriaPrima"));
 craftsManager.addItem(new Item("Honey", 240, "MateriaPrima"));
@@ -292,7 +292,7 @@ craftsManager.addItem(new Item("Butter", 200, "Material"));
 craftsManager.addItem(new Item("Gourmet Seasoning", 185, "Material"));
 craftsManager.addItem(new Item("Brewer Yeast", 125, "Material"));
 craftsManager.addItem(new Item("Seafood Seasoning", 33, "Material"));
-craftsManager.addItem(new Item("Oil", 250, "Material"));
+craftsManager.addItem(new Item("Oil", 170, "Material"));
 
 // Separar
 craftsManager.addItem(new Item("Bolt", 2500, "Material"));
