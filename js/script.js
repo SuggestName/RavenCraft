@@ -41,6 +41,7 @@ function updateQuantity(input) {
 
     // Atualize o custo total geral
     const totalElement = $('#totalCost');
+    totalElement.text(currentTotal.toFixed(2).replace('.', ','));
     let currentTotal = parseFloat(totalElement.text());
     currentTotal += (newTotalCost - detail.totalCost); // Ajuste para atualizar o custo total geral
     totalElement.text(Formatter.formatNumber(currentTotal));
