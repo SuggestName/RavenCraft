@@ -25,7 +25,7 @@ function displayCostReport(costDetails, reportGroup) {
     $('#resultado').html(reportHtml);
 }
 
-function updateQuantity(input, index, costDetails) {
+function updateQuantity(input, index) {
     const newQuantity = parseInt(input.value);
     const originalQuantity = parseInt($(input).attr('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
