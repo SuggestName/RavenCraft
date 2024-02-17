@@ -27,29 +27,25 @@ function displayCostReport(costDetails, reportGroup) {
     $('#resultado').html(reportHtml);
 }
 
-function updateQuantity(input) {
+function updateQuantity(input, index, costDetails) {
     const newQuantity = parseInt(input.value);
-    const originalQuantity = parseInt(input.getAttribute('data-original-value'));
+    const originalQuantity = parseInt($(input).attr('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
 
-    // Recupere os detalhes de custo do atributo de dados HTML
-    const detail = JSON.parse(input.getAttribute('data-cost-details'));
-    const newTotalCost = detail.unitCost * newQuantity;
-
     // Atualize a exibição do custo total do item
-    $(input).next('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
+    const detail = costDetails[index];
+    const newTotalCost = detail.unitCost * newQuantity;
+    $(input).siblings('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
 
-    // Inicialize o custo total geral como zero
+    // Atualize o custo total geral
     let totalCost = 0;
-    
-    // Itere sobre todos os detalhes dos itens
     costDetails.forEach(detail => {
-        // Adicione o custo total do item ao custo total geral
         totalCost += detail.totalCost;
     });
-    
-    // Atualize o texto do elemento com o novo custo total
-    $('#totalCost').text(totalCost.toFixed(2).replace('.', ','));
+    $('#totalCost').text(Formatter.formatNumber(totalCost));
+
+    // Atualize o valor original do input
+    $(input).attr('data-original-value', newQuantity);
 }
 
 function showTotalPrice() {
