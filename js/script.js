@@ -1,14 +1,14 @@
-$(document).ready(function () {
-    $("#receitaSelect").select2({});
-    initializeApp();
-});
-
 const Formatter = {
     formatNumber: function (number) {
         // Use o método toLocaleString para garantir que o ponto seja usado como separador decimal
         return number.toLocaleString('en-US');
     }
 };
+
+$(document).ready(function () {
+    $("#receitaSelect").select2({});
+    initializeApp();
+});
 
 function initializeApp() {
     initializeRecipeUI();
