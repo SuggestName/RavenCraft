@@ -16,7 +16,7 @@ function displayCostReport(costDetails, reportGroup) {
     let totalCost = 0;
 
     costDetails.forEach(detail => {
-        reportHtml += `- <input type="number" value="${detail.quantity}" onchange="updateQuantity(this, ${detail.totalCost})"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})<br/>`;
+        reportHtml += `- <input type="number" value="${detail.quantity}" onchange="updateQuantity(this, ${detail.totalCost}, '${detail.itemName}')"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})<br/>`;
         totalCost += detail.totalCost;
     });
 
@@ -24,11 +24,11 @@ function displayCostReport(costDetails, reportGroup) {
     document.getElementById('resultado').innerHTML += reportHtml;
 }
 
-function updateQuantity(input, totalCost) {
+function updateQuantity(input, totalCost, itemName) {
     const newQuantity = parseInt(input.value);
     const newTotalCost = newQuantity * totalCost;
     // Atualize a exibição do custo total do item
-    input.parentNode.innerHTML = `- <input type="number" value="${newQuantity}" onchange="updateQuantity(this, ${totalCost})"> x ${input.parentNode.getAttribute('data-item')} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})<br/>`;
+    input.parentNode.innerHTML = `- <input type="number" value="${newQuantity}" onchange="updateQuantity(this, ${totalCost}, '${itemName}')"> x ${itemName} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})<br/>`;
     // Atualize o custo total geral
     totalCost += newTotalCost;
 }
