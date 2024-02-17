@@ -13,7 +13,7 @@ function displayCostReport(costDetails, reportGroup) {
     let totalCost = 0;
 
     costDetails.forEach((detail, index) => {
-        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" onchange="updateQuantity(this, ${index}, ${JSON.stringify(costDetails)})">`;
+        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" data-cost-details='${JSON.stringify(detail)}' onchange="updateQuantity(this)">`;
         reportHtml += `<span class="cost-details"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})</span><br/>`;
         totalCost += detail.totalCost;
     });
@@ -22,11 +22,13 @@ function displayCostReport(costDetails, reportGroup) {
     $('#resultado').html(reportHtml);
 }
 
-function updateQuantity(input, index, costDetails) {
+function updateQuantity(input) {
     const newQuantity = parseInt(input.value);
-    const originalQuantity = parseInt($(input).attr('data-original-value'));
+    const originalQuantity = parseInt(input.getAttribute('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
-    const detail = costDetails[index];
+
+    // Recupere os detalhes de custo do atributo de dados HTML
+    const detail = JSON.parse(input.getAttribute('data-cost-details'));
     const newTotalCost = detail.totalCost * newQuantity;
 
     // Atualize a exibição do custo total do item
@@ -38,6 +40,7 @@ function updateQuantity(input, index, costDetails) {
     currentTotal += quantityDifference * detail.totalCost;
     totalElement.text(currentTotal);
 }
+
 
 function showTotalPrice() {
     const itemName = document.getElementById('receitaSelect').value;
