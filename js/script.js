@@ -45,9 +45,12 @@ function updateQuantity(input) {
         let totalCost = 0;
         $('.item-input').each(function () {
             const itemInput = $(this);
-            const itemDetail = JSON.parse(itemInput.attr('data-cost-details'));
-            const itemQuantity = parseInt(itemInput.val());
-            totalCost += itemDetail.unitCost * itemQuantity;
+            const itemCostDetails = itemInput.attr('data-cost-details');
+            if (itemCostDetails) {
+                const itemDetail = JSON.parse(itemCostDetails);
+                const itemQuantity = parseInt(itemInput.val());
+                totalCost += itemDetail.unitCost * itemQuantity;
+            }
         });
 
         // Atualize o elemento HTML que exibe o custo total
