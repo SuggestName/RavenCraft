@@ -16,27 +16,28 @@ function displayCostReport(costDetails, reportGroup) {
     let totalCost = 0;
 
     costDetails.forEach(detail => {
-        reportHtml += `- <input type="number" value="${detail.quantity}" onchange="updateQuantity(this, ${detail.totalCost}, '${detail.itemName}')"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})<br/>`;
+        reportHtml += `- <input type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input">`;
+        reportHtml += `<span class="cost-details"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})</span><br/>`;
         totalCost += detail.totalCost;
     });
 
     reportHtml += `<strong>Custo Total:</strong> ${Formatter.formatNumber(totalCost)}<br/><br/>`;
-    document.getElementById('resultado').innerHTML += reportHtml;
+    $('#resultado').append(reportHtml);
 }
 
 function updateQuantity(input, totalCost, itemName) {
     const newQuantity = parseInt(input.value);
-    const originalQuantity = parseInt(input.getAttribute('data-original-value'));
+    const originalQuantity = parseInt($(input).attr('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
     const newTotalCost = totalCost + (quantityDifference * totalCost);
     
     // Atualize a exibição do custo total do item
-    input.parentNode.innerHTML = `- <input type="number" value="${newQuantity}" data-original-value="${newQuantity}" onchange="updateQuantity(this, ${totalCost}, '${itemName}')"> x ${itemName} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})<br/>`;
+    $(input).siblings('.cost-details').html(` x ${itemName} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
     
     // Atualize o custo total geral
-    const totalElement = document.getElementById('totalCost');
-    const currentTotal = parseFloat(totalElement.textContent);
-    totalElement.textContent = currentTotal + (quantityDifference * totalCost);
+    const totalElement = $('#totalCost');
+    const currentTotal = parseFloat(totalElement.text());
+    totalElement.text(currentTotal + (quantityDifference * totalCost));
 }
 
 function showTotalPrice() {
