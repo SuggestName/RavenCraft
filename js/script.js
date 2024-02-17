@@ -16,7 +16,7 @@ function displayCostReport(costDetails, reportGroup) {
     let totalCost = 0;
 
     costDetails.forEach((detail, index) => {
-        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" onchange="updateQuantity(this)">`;
+        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" onchange="updateQuantity(this, costDetails)">`;
         reportHtml += `<span class="cost-details"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})</span><br/>`;
         totalCost += detail.totalCost;
     });
@@ -31,7 +31,7 @@ function displayCostReport(costDetails, reportGroup) {
     });
 }
 
-function updateQuantity(input) {
+function updateQuantity(input, costDetails) {
     const inputId = $(input).attr('id');
     const index = parseInt(inputId.split('_')[1]);
     const newQuantity = parseInt(input.value);
