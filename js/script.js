@@ -3,6 +3,13 @@ $(document).ready(function () {
     initializeApp();
 });
 
+const Formatter = {
+    formatNumber: function (number) {
+        // Use o método toLocaleString para garantir que o ponto seja usado como separador decimal
+        return number.toLocaleString('en-US');
+    }
+};
+
 function initializeApp() {
     initializeRecipeUI();
     initializeThemeToggle();
