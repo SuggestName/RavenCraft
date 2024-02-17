@@ -59,6 +59,9 @@ function showTotalPrice() {
         ignorarItens: document.getElementById('ignorarItens').checked
     };
 
+    // Defina costDetails aqui
     let costDetails = craftsManager.calculateCraftingCost(itemName, quantity, options);
+
+    // Exiba o relatório de custos
     displayCostReport(costDetails, 1);
 }
