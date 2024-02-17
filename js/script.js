@@ -29,7 +29,7 @@ function updateQuantity(input) {
 
     // Recupere os detalhes de custo do atributo de dados HTML
     const detail = JSON.parse(input.getAttribute('data-cost-details'));
-    const newTotalCost = detail.unitCost * newQuantity; // Corrigido o cálculo do custo total
+    const newTotalCost = detail.unitCost * newQuantity;
 
     // Atualize a exibição do custo total do item
     $(input).next('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
@@ -37,7 +37,7 @@ function updateQuantity(input) {
     // Atualize o custo total geral
     const totalElement = $('#totalCost');
     let currentTotal = parseFloat(totalElement.text());
-    currentTotal += quantityDifference * detail.unitCost; // Corrigido o cálculo do custo total
+    currentTotal += (newTotalCost - detail.totalCost); // Ajuste para atualizar o custo total geral
     totalElement.text(Formatter.formatNumber(currentTotal));
 }
 
