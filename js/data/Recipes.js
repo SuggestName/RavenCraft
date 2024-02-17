@@ -390,7 +390,7 @@ craftsManager.addRecipe(new Recipe("Advanced Saddle", { "Craftman's Leather": 20
 craftsManager.addRecipe(new Recipe("Artisan Saddle", { "Tanned Leather": 25, "Steel Ingot": 10 }, {}, "Weaving"));
 
 craftsManager.addRecipe(new Recipe("Ship Module", {}, {}, "Weaving"));
-craftsManager.addRecipe(new Recipe("Small Sail Kit", { "Craftman's Cloth": 60, "Craftman's Thread": 30, "Craftman's Thread": 90 }, {}, "Weaving"));
+craftsManager.addRecipe(new Recipe("Small Sail Kit", { "Craftman's Cloth": 60, "Craftman's Thread": 30, "Craftman's Leather": 90 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Small Fishing Nets Kit", { "Tanned Leather": 15, "Fine Thread": 50 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Medium Sail Kit", { "Tanned Leather": 50, "Fine Thread": 150, "Silk": 100 }, {}, "Weaving"));
 craftsManager.addRecipe(new Recipe("Medium Fishing Nets Kit", { "Merchant's Leather": 30, "Merchant's Thread": 130 }, {}, "Weaving"));
