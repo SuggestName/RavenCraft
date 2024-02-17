@@ -13,12 +13,12 @@ function displayCostReport(costDetails, reportGroup) {
     let totalCost = 0;
 
     costDetails.forEach((detail, index) => {
-        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" data-cost-details='${JSON.stringify(detail)}' onchange="updateQuantity(this)">`;
+        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" data-cost-details='${JSON.stringify(detail)}' class="item-input" onchange="updateQuantity(this)">`;
         reportHtml += `<span class="cost-details"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})</span><br/>`;
         totalCost += detail.totalCost;
     });
 
-    reportHtml += `<strong>Custo Total:</strong> ${Formatter.formatNumber(totalCost)}<br/><br/>`;
+    reportHtml += `<strong>Custo Total:</strong> <span id="totalCost">${Formatter.formatNumber(totalCost)}</span><br/><br/>`;
     $('#resultado').html(reportHtml);
 }
 
@@ -32,37 +32,34 @@ function updateQuantity(input) {
     const newTotalCost = detail.totalCost * newQuantity;
 
     // Atualize a exibição do custo total do item
-    $(input).parent().find('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
+    $(input).next('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
 
     // Atualize o custo total geral
     const totalElement = $('#totalCost');
     let currentTotal = parseFloat(totalElement.text());
     currentTotal += quantityDifference * detail.totalCost;
-    totalElement.text(currentTotal);
+    totalElement.text(Formatter.formatNumber(currentTotal));
 }
-
 
 function showTotalPrice() {
     const itemName = document.getElementById('receitaSelect').value;
     const quantity = parseInt(document.getElementById('quantidade').value, 10);
     document.getElementById('resultado').innerHTML = '';
 
+    document.querySelectorAll('.item-input').forEach(input => {
+        const itemName = input.getAttribute('data-itemname');
+        const newValue = parseFloat(input.value);
+        const item = craftsManager.getItem(itemName);
+        if (item) {
+            item.marketValue = newValue;
+        }
+    });
+
     const options = {
         ignorarMateriais: document.getElementById('ignorarMateriais').checked,
         ignorarItens: document.getElementById('ignorarItens').checked
     };
 
-    // Calcula o custo total
     let costDetails = craftsManager.calculateCraftingCost(itemName, quantity, options);
-    let totalCost = 0;
-    costDetails.forEach((detail) => {
-        totalCost += detail.totalCost;
-    });
-
-    // Exibe o relatório de custos
     displayCostReport(costDetails, 1);
-
-    // Atualiza o custo total geral
-    const totalElement = $('#totalCost');
-    totalElement.text(Formatter.formatNumber(totalCost));    
 }
