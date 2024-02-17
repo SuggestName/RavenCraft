@@ -23,14 +23,14 @@ function displayCostReport(costDetails, reportGroup) {
     $('#resultado').html(reportHtml);
 }
 
-function updateQuantity(input, index, costDetails) {
+function updateQuantity(input, index) {
     const newQuantity = parseInt(input.value);
     const originalQuantity = parseInt($(input).attr('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
-    const detail = costDetails[index];
-    const newTotalCost = detail.totalCost * newQuantity;
 
     // Atualize a exibição do custo total do item
+    const detail = costDetails[index];
+    const newTotalCost = detail.totalCost * newQuantity;
     $(input).siblings('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
 
     // Atualize o custo total geral
@@ -64,4 +64,16 @@ function showTotalPrice() {
 
     // Exiba o relatório de custos
     displayCostReport(costDetails, 1);
+    
+    let totalCost = 0;
+    costDetails.forEach((detail) => {
+        totalCost += detail.totalCost;
+    });
+
+    // Exibe o relatório de custos
+    displayCostReport(costDetails, 1);
+
+    // Atualiza o custo total geral
+    const totalElement = $('#totalCost');
+    totalElement.text(Formatter.formatNumber(totalCost));    
 }
