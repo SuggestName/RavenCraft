@@ -29,15 +29,16 @@ function updateQuantity(input, totalCost, itemName) {
     const newQuantity = parseInt(input.value);
     const originalQuantity = parseInt($(input).attr('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
-    const newTotalCost = totalCost + (quantityDifference * totalCost);
-    
+    const newTotalCost = totalCost * newQuantity;
+
     // Atualize a exibição do custo total do item
     $(input).siblings('.cost-details').html(` x ${itemName} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
-    
+
     // Atualize o custo total geral
     const totalElement = $('#totalCost');
-    const currentTotal = parseFloat(totalElement.text());
-    totalElement.text(currentTotal + (quantityDifference * totalCost));
+    let currentTotal = parseFloat(totalElement.text());
+    currentTotal += quantityDifference * totalCost;
+    totalElement.text(currentTotal);
 }
 
 function showTotalPrice() {
