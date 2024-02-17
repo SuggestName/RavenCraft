@@ -26,11 +26,17 @@ function displayCostReport(costDetails, reportGroup) {
 
 function updateQuantity(input, totalCost, itemName) {
     const newQuantity = parseInt(input.value);
-    const newTotalCost = newQuantity * totalCost;
+    const originalQuantity = parseInt(input.getAttribute('data-original-value'));
+    const quantityDifference = newQuantity - originalQuantity;
+    const newTotalCost = totalCost + (quantityDifference * totalCost);
+    
     // Atualize a exibição do custo total do item
-    input.parentNode.innerHTML = `- <input type="number" value="${newQuantity}" onchange="updateQuantity(this, ${totalCost}, '${itemName}')"> x ${itemName} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})<br/>`;
+    input.parentNode.innerHTML = `- <input type="number" value="${newQuantity}" data-original-value="${newQuantity}" onchange="updateQuantity(this, ${totalCost}, '${itemName}')"> x ${itemName} (Preço: ${Formatter.formatNumber(totalCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})<br/>`;
+    
     // Atualize o custo total geral
-    totalCost += newTotalCost;
+    const totalElement = document.getElementById('totalCost');
+    const currentTotal = parseFloat(totalElement.textContent);
+    totalElement.textContent = currentTotal + (quantityDifference * totalCost);
 }
 
 function showTotalPrice() {
