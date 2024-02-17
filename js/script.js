@@ -32,7 +32,7 @@ function updateQuantity(input) {
     const newTotalCost = detail.totalCost * newQuantity;
 
     // Atualize a exibição do custo total do item
-    $(input).siblings('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
+    $(input).parent().find('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
 
     // Atualize o custo total geral
     const totalElement = $('#totalCost');
