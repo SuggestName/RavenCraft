@@ -40,11 +40,17 @@ function updateQuantity(input) {
     $(input).next('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
 
     // Atualize o custo total geral
-    const totalElement = $('#totalCost');
+    let totalElement = $('#totalCost');
+    let currentTotal = parseFloat(totalElement.text()); // Obter o valor atual do custo total
+    
+    // Calcular a diferença no custo total
+    let difference = newTotalCost - detail.totalCost;
+    
+    // Adicionar a diferença ao custo total atual
+    currentTotal += difference;
+    
+    // Atualizar o texto do elemento com o novo custo total
     totalElement.text(currentTotal.toFixed(2).replace('.', ','));
-    let currentTotal = parseFloat(totalElement.text());
-    currentTotal += (newTotalCost - detail.totalCost); // Ajuste para atualizar o custo total geral
-    totalElement.text(Formatter.formatNumber(currentTotal));
 }
 
 function showTotalPrice() {
