@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $("#receitaSelect").select2({
     });
@@ -6,9 +5,8 @@ $(document).ready(function () {
 });
 
 function initializeApp() {
-   
-    initializeRecipeUI()
-    initializeThemeToggle()
+    initializeRecipeUI();
+    initializeThemeToggle();
 }
 
 function displayCostReport(costDetails, reportGroup) {
@@ -16,28 +14,19 @@ function displayCostReport(costDetails, reportGroup) {
     let totalCost = 0;
 
     costDetails.forEach((detail, index) => {
-        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" onchange="updateQuantity(this, costDetails)">`;
+        reportHtml += `- <input id="input_${index}" type="number" value="${detail.quantity}" data-original-value="${detail.quantity}" class="item-input" onchange="updateQuantity(this, ${index})">`;
         reportHtml += `<span class="cost-details"> x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(detail.totalCost)})</span><br/>`;
         totalCost += detail.totalCost;
     });
 
     reportHtml += `<strong>Custo Total:</strong> ${Formatter.formatNumber(totalCost)}<br/><br/>`;
     $('#resultado').html(reportHtml);
-
-    // Adicione o manipulador de eventos onchange
-    $('.item-input').change(function() {
-        const index = $(this).attr('id').split('_')[1];
-        updateQuantity(this, index, costDetails);
-    });
 }
 
-function updateQuantity(input, costDetails) {
-    const inputId = $(input).attr('id');
-    const index = parseInt(inputId.split('_')[1]);
+function updateQuantity(input, index) {
     const newQuantity = parseInt(input.value);
     const originalQuantity = parseInt($(input).attr('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
-
     const detail = costDetails[index];
     const newTotalCost = detail.totalCost * newQuantity;
 
