@@ -32,24 +32,29 @@ function updateQuantity(input) {
     const originalQuantity = parseInt(input.getAttribute('data-original-value'));
     const quantityDifference = newQuantity - originalQuantity;
 
-    // Recupere os detalhes de custo do atributo de dados HTML
-    const detail = JSON.parse(input.getAttribute('data-cost-details'));
-    const newTotalCost = detail.unitCost * newQuantity;
+    // Recupere os detalhes de custo do atributo de dados HTML, verificando se está definido primeiro
+    const costDetailsAttr = input.getAttribute('data-cost-details');
+    if (costDetailsAttr) {
+        const detail = JSON.parse(costDetailsAttr);
+        const newTotalCost = detail.unitCost * newQuantity;
 
-    // Atualize a exibição do custo total do item
-    $(input).next('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
+        // Atualize a exibição do custo total do item
+        $(input).next('.cost-details').html(` x ${detail.itemName} (Preço: ${Formatter.formatNumber(detail.unitCost)}, Custo total: ${Formatter.formatNumber(newTotalCost)})`);
 
-    // Atualize o custo total geral recalculando os custos totais individuais e somando-os
-    let totalCost = 0;
-    $('.item-input').each(function () {
-        const itemInput = $(this);
-        const itemDetail = JSON.parse(itemInput.attr('data-cost-details'));
-        const itemQuantity = parseInt(itemInput.val());
-        totalCost += itemDetail.unitCost * itemQuantity;
-    });
+        // Atualize o custo total geral recalculando os custos totais individuais e somando-os
+        let totalCost = 0;
+        $('.item-input').each(function () {
+            const itemInput = $(this);
+            const itemDetail = JSON.parse(itemInput.attr('data-cost-details'));
+            const itemQuantity = parseInt(itemInput.val());
+            totalCost += itemDetail.unitCost * itemQuantity;
+        });
 
-    // Atualize o elemento HTML que exibe o custo total
-    $('#totalCost').text(Formatter.formatNumber(totalCost));
+        // Atualize o elemento HTML que exibe o custo total
+        $('#totalCost').text(Formatter.formatNumber(totalCost));
+    } else {
+        console.error('Atributo data-cost-details não está definido para o elemento', input);
+    }
 }
 
 function showTotalPrice() {
