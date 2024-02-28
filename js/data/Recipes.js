@@ -461,7 +461,7 @@ recipesManager.addRecipe(new Recipe("Rich Flour", { "Three-Leaf Clover": 1, "Gro
 recipesManager.addRecipe(new Recipe("T2 Small Wooden Cabin", { "Ravencrest Emblem": 100, "Treated Plank": 20, "Stone Block": 20, "Nail": 30, "Dense Plank": 10 }, {"T3 Small Wooden House": 1}, "House Upgrades", "Small House - Upgrades"));
 recipesManager.addRecipe(new Recipe("T3 Small Wooden House", { "Ravencrest Emblem": 100, "Treated Plank": 20, "Stone Block": 20, "Nail": 30, "Dense Plank": 10 }, {"T3 Small Wooden House": 1}, "House Upgrades", "Small House - Upgrades"));
 
-recipesManager.addRecipe(new Recipe("T1 Small Bedroom", { "Ravencrest Emblem": 5, "Rough Plank": 3, "Copper Ingot": 6 }, {"T1 Small Bedroom": 1}, "House Upgrades", "Small House - Rooms"));
+recipesManager.addRecipe(new Recipe("T1 Small Bedroom", { "Ravencrest Emblem": 5, "Rough Plank": 3, "Coarse Leather": 2 }, {"T1 Small Bedroom": 1}, "House Upgrades", "Small House - Rooms"));
 recipesManager.addRecipe(new Recipe("T1 Small Armory", { "Ravencrest Emblem": 5, "Rough Plank": 3, "Copper Ingot": 6 }, {"T1 Small Armory": 1}, "House Upgrades", "Small House - Rooms"));
 recipesManager.addRecipe(new Recipe("T1 Small Weaving", { "Ravencrest Emblem": 5, "Rough Plank": 3, "Coarse Thread": 2 }, {"T1 Small Weaving": 1}, "House Upgrades", "Small House - Rooms"));
 recipesManager.addRecipe(new Recipe("T1 Small Kitchen", { "Ravencrest Emblem": 5, "Stone": 15, "Copper Ingot": 8 }, {"T1 Small Kitchen": 1}, "House Upgrades", "Small House - Rooms"));
