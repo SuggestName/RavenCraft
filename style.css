@@ -1,157 +1,39 @@
-/* Estilos Base */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+html, body {
+    height: 100%; /* Alterado de 100vh para 100% para melhorar a flexibilidade */
+    overflow-x: hidden; /* Mantém a rolagem horizontal oculta */
 }
 
-.theme-toggle-btn {
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: 1em;
-    transition: color 0.3s;
+.main-content, #professionsMenu, #recipesMenu, #recipeDetails {
+    overflow-y: auto; /* Mantém a rolagem vertical quando necessário */
 }
 
-/* Cores e estilos para o modo claro */
-.light-mode {
-    background-color: #ffffff;
-    color: #000000;
+/* Ajustes para garantir que o conteúdo principal seja flexível e acessível */
+.main-content {
+    height: auto; /* Permite que o conteúdo principal se ajuste ao conteúdo */
+    min-height: 60vh; /* Garante uma altura mínima para o conteúdo principal */
+    max-height: none; /* Remove a restrição de altura máxima */
 }
 
-.light-mode .header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
+#professionsMenu, #recipesMenu, #recipeDetails {
+    max-height: none; /* Remove a restrição de altura máxima */
 }
 
-.light-mode .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+/* Melhorias para responsividade e visualização de tabelas e listas */
+.table-responsive, .list-group-item {
+    box-sizing: border-box; /* Garante que o padding e border estejam incluídos na largura total */
 }
 
-.light-mode .form-control {
-    background-color: #ffffff;
-    color: #495057;
+.bg-gray {
+    background-color: rgb(216, 216, 216);
 }
 
-.light-mode .form-control:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
-.light-mode option:disabled {
-    background-color: #fff069; /* Cor de fundo para opções desabilitadas */
-    color: #000000; /* Cor do texto para opções desabilitadas */
-}
-
-/* Cores e estilos para o modo escuro */
-.dark-mode {
-    background-color: #121212;
-    color: #e7e7e7;
-}
-
-.dark-mode .header {
-    background-color: #343a40;
-    border-bottom: 1px solid #454d55;
-}
-
-.dark-mode .btn-primary {
-    background-color: #007bff;
-    border-color: #0069d9;
-}
-
-.dark-mode .form-control {
-    background-color: #6c757d;
-    color: #e9ecef;
-}
-
-.dark-mode .form-control:focus {
-    border-color: #5a6268;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
-/* Ajustes para todos os componentes em modo escuro */
-.dark-mode input, .dark-mode select, .dark-mode button, .dark-mode .btn {
-    background-color: #6c757d;
-    color: #e9ecef;
-    border-color: #6c757d;
-}
-
-.dark-mode option {
-    background-color: #343a40;
-    color: #ffffff;
-}
-
-.dark-mode .navbar,
-.dark-mode .navbar-light.bg-light {
-    background-color: #343a40 !important; /* Ajusta a cor de fundo no modo escuro */
-    color: #ffffff !important;
-}
-
-.dark-mode .navbar-light .navbar-nav .nav-link {
-    color: #ffffff !important; /* Assegura que os links fiquem visíveis em modo escuro */
-}
-
-.dark-mode option:disabled {
-    background-color: #fff069; /* Cor de fundo para opções desabilitadas */
-    color: #000000; /* Cor do texto para opções desabilitadas */
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: row;
-        justify-content: space-between;
+    /* Ajustes para telas menores (tablets e smartphones) */
+    .main-content {
+        max-height: none; /* Remove restrições de altura máxima para telas menores */
     }
-}
 
-/* Ajustes para todos os componentes em modo escuro */
-.dark-mode input,
-.dark-mode select,
-.dark-mode button,
-.dark-mode .btn,
-.dark-mode .select2-container--default .select2-selection--single,
-.dark-mode .select2-container--default .select2-selection--single .select2-selection__rendered,
-.dark-mode .select2-container--default .select2-results__option {
-    background-color: #6c757d;
-    color: #e9ecef;
-    border-color: #6c757d;
-}
-
-/* Ajustes adicionais específicos para o Select2 no modo escuro */
-.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow b {
-    border-color: #e9ecef transparent transparent transparent;
-}
-
-.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow {
-    border-color: #6c757d transparent transparent transparent;
-}
-
-.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow:hover b {
-    border-color: #e9ecef transparent transparent transparent;
-}
-
-.dark-mode .select2-container--default .select2-selection--single .select2-selection__arrow:hover {
-    border-color: #6c757d transparent transparent transparent;
-}
-
-/* Destaque para opções desabilitadas */
-.dark-mode .select2-container--default .select2-results__option[aria-disabled=true] {
-    background-color: #495057; /* Cor de fundo para opções desabilitadas */
-    color: #868e96; /* Cor do texto para opções desabilitadas */
-}
-
-/* Hover para opções */
-.dark-mode .select2-container--default .select2-results__option:hover {
-    background-color: #343a40; /* Cor de fundo para o hover nas opções */
-    color: #ffffff; /* Cor do texto para o hover nas opções */
-}
-
-.select2-container--default .select2-results>.select2-results__options {
-    max-height: 50vh; /* Ajuste para a altura desejada */
-    overflow-y: auto;
+    .table, #professionsMenu, #recipesMenu, #recipeDetails {
+        max-height: none; /* Permite que elementos expandam conforme necessário em telas menores */
+    }
 }

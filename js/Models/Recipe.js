@@ -1,9 +1,10 @@
 class Recipe {
-    constructor(name, requirements, rewards, group = 'Default') {
+    constructor(name, requirements, rewards, profession, group) {
         this.name = name;
         this.requirements = requirements;
         this.rewards = rewards;
-        this.group = group;
+        this.profession = profession;
+        this.group = group
     }
 
     hasRequirements() {

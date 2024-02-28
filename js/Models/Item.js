@@ -1,8 +1,8 @@
 class Item {
-	constructor(name, marketValue, group = 'Material') {
+	constructor(name, marketValue, filters) {
 		this.name = name;
 		this.marketValue = marketValue;
-		this.group = group;
+		this.filters = filters;
 	}
 
 	updateMarketValue(newMarketValue) {
