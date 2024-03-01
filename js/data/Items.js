@@ -16,6 +16,7 @@ itemsManager.addItem(new Item("Hide", 437, [ "MateriaPrima" ]));
 itemsManager.addItem(new Item("Cotton", 250, [ "MateriaPrima" ]));
 itemsManager.addItem(new Item("Spool of Hair", 219, [ "MateriaPrima" ]));
 itemsManager.addItem(new Item("Wool", 588, [ "MateriaPrima" ]));
+itemsManager.addItem(new Item("Fertilizer", 1750, [ "MateriaPrima" ]));
 
 // ------- Loots ------- //
 itemsManager.addItem(new Item("Troll Fang", 4199, [ "MateriaPrima" ]));

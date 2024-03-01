@@ -458,8 +458,7 @@ recipesManager.addRecipe(new Recipe("Brewer Yeast", { "Wheat": 3, "Orange Scales
 recipesManager.addRecipe(new Recipe("Gourmet Seasoning", { "Onion": 1, "Salt": 3 }, {"Gourmet Seasoning": 1}, "Cooking", "Ingredient"));
 recipesManager.addRecipe(new Recipe("Rich Flour", { "Three-Leaf Clover": 1, "Ground Flour": 20 }, {"Rich Flour": 1}, "Cooking", "Ingredient"));
 
-recipesManager.addRecipe(new Recipe("T2 Small Wooden Cabin", { "Ravencrest Emblem": 100, "Treated Plank": 20, "Stone Block": 20, "Nail": 30, "Dense Plank": 10 }, {"T3 Small Wooden House": 1}, "House Upgrades", "Small House - Upgrades"));
-recipesManager.addRecipe(new Recipe("T3 Small Wooden House", { "Ravencrest Emblem": 100, "Treated Plank": 20, "Stone Block": 20, "Nail": 30, "Dense Plank": 10 }, {"T3 Small Wooden House": 1}, "House Upgrades", "Small House - Upgrades"));
+recipesManager.addRecipe(new Recipe("T2 Small Wooden House", { "Ravencrest Emblem": 100, "Treated Plank": 20, "Stone Block": 20, "Nail": 30, "Dense Plank": 10 }, {"T2 Small Wooden House": 1}, "House Upgrades", "Small House - Upgrades"));
 
 recipesManager.addRecipe(new Recipe("T1 Small Bedroom", { "Ravencrest Emblem": 5, "Rough Plank": 3, "Coarse Leather": 2 }, {"T1 Small Bedroom": 1}, "House Upgrades", "Small House - Rooms"));
 recipesManager.addRecipe(new Recipe("T1 Small Armory", { "Ravencrest Emblem": 5, "Rough Plank": 3, "Copper Ingot": 6 }, {"T1 Small Armory": 1}, "House Upgrades", "Small House - Rooms"));
@@ -468,3 +467,14 @@ recipesManager.addRecipe(new Recipe("T1 Small Kitchen", { "Ravencrest Emblem": 5
 recipesManager.addRecipe(new Recipe("T1 Small Workshop", { "Ravencrest Emblem": 5, "Rough Plank": 5, "Copper Ingot": 2 }, {"T1 Small Workshop": 1}, "House Upgrades", "Small House - Rooms"));
 
 recipesManager.addRecipe(new Recipe("T2 Medium Bedroom", { "Ravencrest Emblem": 10, "Simple Bed": 1, "Cheap Rug": 1, "Storage Container": 1 }, {"T2 Medium Bedroom": 1}, "House Upgrades", "Small House - Rooms"));
+recipesManager.addRecipe(new Recipe("T2 Medium Weaving", { "Ravencrest Emblem": 10, "Cloth Roll": 1, "Thread Spool": 1, "Frail Loom": 1 }, {"T2 Medium Weaving": 1}, "House Upgrades", "Small House - Rooms"));
+
+recipesManager.addRecipe(new Recipe("T1 Basic Ship", { "Old Hull Frame": 1, "Old Mast": 1 }, {"T1 Basic Ship": 1}, "Ship Upgrades", "Hull"));
+recipesManager.addRecipe(new Recipe("T2 Small Fishing Ship", { "Small Hull Frame": 1, "Mast": 1, "Small Fishing Storage": 1, "Reinforced Plate": 10, "Nail": 20 }, {"T2 Small Fishing Ship": 1}, "Ship Upgrades", "Hull"));
+recipesManager.addRecipe(new Recipe("T3 Medium Fishing Ship", { "Medium Hull Frame": 1, "Mast": 2, "Medium Fishing Storage": 1, "Reinforced Plate": 20, "Nail": 40, "T2 Small Fishing Ship": 1 }, {"T3 Medium Fishing Ship": 1}, "Ship Upgrades", "Hull"));
+//recipesManager.addRecipe(new Recipe("T4 Large Fishing Ship", { "Large Hull Frame": 1, "Mast": 3, "Large Fishing Storage": 1, "Reinforced Plate": 30, "Nail": 60, "T3 Medium Fishing Ship": 1 }, {"T4 Large Fishing Ship": 1}, "Ship Upgrades", "Hull"));
+
+recipesManager.addRecipe(new Recipe("T1 Basic Sail", { "Starting Sail Kit": 1 }, {"T1 Basic Sail": 1}, "Ship Upgrades", "Sail"));
+recipesManager.addRecipe(new Recipe("T2 Small Sail", { "Small Sail Kit": 1 }, {"T2 Small Sail": 1}, "Ship Upgrades", "Sail"));
+recipesManager.addRecipe(new Recipe("T3 Medium Sail", { "Medium Sail Kit": 1 }, {"T3 Medium Fishing Ship": 1}, "Ship Upgrades", "Sail"));
+recipesManager.addRecipe(new Recipe("T4 Large Sail", { "Large Sail Kit": 1 }, {"T4 Large Sail": 1}, "Ship Upgrades", "Sail"));

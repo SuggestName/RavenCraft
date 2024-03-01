@@ -111,7 +111,11 @@ function filterRecipesByName() {
     recipesMenu.innerHTML = '';
 
     let filteredRecipes = Array.from(recipesManager.recipes.values()).filter(recipe =>
-        recipe.name.toLowerCase().includes(searchText) || recipe.group.toLowerCase() === searchText
+        recipe.name.toLowerCase().includes(searchText) ||
+        recipe.group.toLowerCase().includes(searchText) ||
+        Object.keys(recipe.requirements).some(itemName =>
+            itemName.toLowerCase().includes(searchText)
+        )
     );
 
     if (filteredRecipes.length === 0) {
@@ -146,11 +150,13 @@ function calculateRecipeCost(selectedRecipeName, ignoreMaterials, ignoreItems, q
     };
 
     const calculateItemCost = (itemName, quantity, ignoreMaterials, ignoreItems, isRootCall = true) => {
-        const item = itemsManager.getItem(itemName);
-        if (!item && !isRootCall) return;
+        let item = itemsManager.getItem(itemName);
+        if (!item) {
+            item = new Item(itemName, 0, []);
+        }
 
         const recipe = recipesManager.getRecipe(itemName);
-        const shouldIgnore = !isRootCall && ((ignoreMaterials && item.filters.includes("Material")) || (ignoreItems && item.filters.includes("Item")));
+        const shouldIgnore = !isRootCall && ((ignoreMaterials && item.filters && item.filters.includes("Material")) || (ignoreItems && item.filters && item.filters.includes("Item")));
 
         if (!recipe || shouldIgnore) {
             addItemCost(itemName, quantity, item.marketValue);
